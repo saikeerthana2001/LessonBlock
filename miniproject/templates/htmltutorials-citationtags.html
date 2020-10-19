@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block body %}
+{% include 'navbar.html' %}
+<div class="sidenav">
+  <a href="{% url 'htmltutorials' %}">HTML overview</a>
+  <a href="{% url 'htmltutorials-basictags'%}">basic HTML tags</a>
+  <a href="{% url 'htmltutorials-textformatting'%}">text formatting tags</a>
+  <a href="{% url 'htmltutorials-citationtags' %}">citation tags</a>
+  <a>lists</a>
+  <a>Tables</a>
+  <a >HTML forms</a>
+  <a >Block level elements</a>
+  <a>Inline elements</a>
+</div>
+<div class="main">
+    <h2>Citation Tags and Elements</h2>
+    <p>Citation elements include:</p>
+    <ul>
+        <li>&lt;abbr&gt; - Defines an abbreviation or acronym</li>
+        <li>&lt;address&gt; - Defines contact information for the author/owner of a document</li>
+        <li>&lt;bdo&gt; - Defines the text direction</li>
+        <li>&lt;blockquote&gt; - Defines a section that is quoted from another source</li>
+        <li>&lt;cite&gt; - Defines the title of a work</li>
+        <li>&lt;q&gt; - Defines a short inline quotation</li>
+    </ul>
+    <br>
+    <p><pre>
+        <code>
+            &lt;blockquote&gt;
+            &lt;p&gt;It was a bright cold day in April, and the clocks were striking thirteen.&lt;/p&gt;
+            &lt;footer&gt;
+                First sentence in &lt;cite&gt;&lt;a href="http://www.george-orwell.org/1984/0.html"&gt;Nineteen Eighty-Four&lt;/a&gt;&lt;/cite&gt; by George Orwell (Part 1, Chapter 1).
+            &lt;/footer&gt;
+            &lt;/blockquote&gt;
+        </code>
+        </pre>
+    </p>
+    <br>
+    <p>The output of above code looks like:</p>
+    <p><pre>
+        <code>
+            <blockquote>
+            <p>It was a bright cold day in April, and the clocks were striking thirteen.</p>
+            <footer>
+            First sentence in <cite><a href="http://www.george-orwell.org/1984/0.html">Nineteen Eighty-Four</a></cite> by George Orwell (Part 1, Chapter 1).
+            </footer>
+            </blockquote>
+        </code>
+        </pre>
+    </p>
+
+    <br>
+    <br>
+    <br>
+</div>
+{% endblock %}

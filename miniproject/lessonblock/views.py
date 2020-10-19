@@ -17,3 +17,9 @@ def htmltutorials(request):
     return render(request,"htmltutorials.html")
 def htmltutorialsbasictags(request):
     return render(request,"htmltutorials-basictags.html")
+def htmltutorialstextformatting(request):
+    return render(request,"htmltutorials-textformatting.html")
+def htmltutorialscitationtags(request):
+    return render(request,"htmltutorials-citationtags.html")
+
+
