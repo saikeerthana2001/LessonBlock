@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% block body %}
+{% include 'navbar.html' %}
+<div class="sidenav">
+  <a>HTML overview</a>
+  <a>basic HTML tags</a>
+  <a >text formatting tags</a>
+  <a >citation tags</a>
+  <a>lists</a>
+  <a>Tables</a>
+  <a >HTML forms</a>
+  <a >Block level elements</a>
+  <a>Inline elements</a>
+</div>
+<div class="main">
+    <table border="1" width="100%" >
+        <col style="width:15%">
+        <col style="width:70%">
+        <tr>
+            <th>Tag</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>Heading Tags</td>
+            <td>Any document starts with a heading. You can use different sizes for your headings.
+                HTML also has six levels of headings, which use the elements &lt;h1&gt;, &lt;h2&gt;,
+                &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, and &lt;h6&gt; . W
+                hile displaying any heading, browser adds one line before and one line after that heading.</td>
+        </tr>
+        <tr>
+            <td>Paragraph Tag</td>
+            <td>The &lt;p&gt; tag offers a way to structure your text into different paragraphs.
+                Each paragraph of text should go in between an opening &lt;p&gt; and a closing &lt;/p&gt; tag </td>
+        </tr>
+        <tr>
+            <td>Line Break Tag</td>
+            <td>Whenever you use the &lt;br/&gt; element, anything following it starts from the next line.
+                This tag is an example of an empty element,
+                where you do not need opening and closing tags, as there is nothing to go in between them</td>
+        </tr>
+        <tr>
+            <td>Centering Content</td>
+            <td>You can use &lt;center&gt; tag to put any content in the center of the page or any table cell.</td>
+        </tr>
+        <tr>
+            <td>Horizontal Lines</td>
+            <td>Horizontal lines are used to visually break-up sections of a document.
+                The &lt;hr&gt; tag creates a line from the current position
+                in the document to the right margin and breaks the line accordingly.</td>
+        </tr>
+        <tr>
+            <td>Preserve Formatting</td>
+            <td>Sometimes, you want your text to follow the exact format of how it is written in the HTML document.
+                In these cases, you can use the preformatted tag &lt;pre&gt;.Any text between the opening &lt;pre&gt; tag
+                    and the closing &lt;/pre&gt; tag will preserve the formatting of the source document.</td>
+        </tr>
+        <tr>
+            <td>Image Tag</td>
+            <td>HTML images are defined with the &lt;img&gt; tag.The source file (src), alternative text (alt), width,
+                and height are provided as attributes</td>
+        </tr>
+        <tr>
+            <td>Anchor tag</td>
+            <td>HTML links are defined with the &lt;a&gt; tag.The link's destination is specified in the href attribute.
+                Attributes are used to provide additional information about HTML elements.</td>
+        </tr>
+    </table>
+</div>
+{% endblock %}
