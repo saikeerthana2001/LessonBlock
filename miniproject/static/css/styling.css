@@ -42,3 +42,6 @@
   margin: 20px;
 }
 
+td,th{
+    padding:20px;
+}
