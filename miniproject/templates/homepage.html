@@ -1,7 +1,56 @@
-{%extends 'base.html'%}
-{%block title%}
-{%endblock%}
-{%block body%}
-{%include 'navbar.html'%}
-
-{%endblock%}
+{% extends 'base.html' %}
+{% block body %}
+{% include 'navbar.html' %}
+<div class="sidenav">
+  <a><b>HTML</b></a>
+  <a>Tutorials</a>
+  <a >References</a>
+  <a >Examples</a>
+  <a> Exercises</a>
+  <br><br>
+  <a><b>CSS</b></a>
+  <a>Tutorials</a>
+  <a >References</a>
+  <a >Examples</a>
+  <a> Exercises</a>
+  <br><br>
+  <a><b>JAVASCRIPT</b></a>
+  <a>Tutorials</a>
+  <a >References</a>
+  <a >Examples</a>
+  <a> Exercises</a>
+  <br><br>
+  <a><b>JAVASCRIPT</b></a>
+  <a>Tutorials</a>
+  <a >References</a>
+  <a >Examples</a>
+  <a> Exercises</a>
+  <br><br>
+</div>
+<!-- Page content -->
+<div class="main">
+  <div class="maindiv">
+    <center>
+      <h1>HTML</h1>
+      <p>The language for building web pages</p>
+      <span><a>LEARN HTML &nbsp;&nbsp;&nbsp;</a><a>HTML REFERENCE</a></span>
+    </center>
+  </div>
+  <div align="right">
+    <div class="maindiv">
+    <center>
+      <h1>CSS</h1>
+      <p>The language for styling web pages</p>
+      <span><a>LEARN CSS &nbsp;&nbsp;&nbsp;</a><a>CSS REFERENCE</a></span>
+    </center>
+  </div>
+  </div>
+  <div class="maindiv">
+    <center>
+      <h1>JAVASCRIPT</h1>
+      <p>The language for programming web pages</p>
+      <span><a>LEARN JS &nbsp;&nbsp;&nbsp;</a><a>JS REFERENCE</a></span>
+    </center>
+  </div>
+</div>
+{% endblock %}
