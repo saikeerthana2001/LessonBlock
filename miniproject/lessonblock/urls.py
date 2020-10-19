@@ -7,4 +7,6 @@ from .views import *
 urlpatterns = [
     path('',Homepage,name='Homepage'),
     path('signup/',signup,name='signup'),
+    path('htmltutorials/',htmltutorials,name='htmltutorials'),
+    path('htmltutorials/basictags',htmltutorialsbasictags,name='htmltutorials-basictags'),
 ]
