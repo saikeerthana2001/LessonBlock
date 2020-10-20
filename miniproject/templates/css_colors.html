@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block body %}
+{% include 'navbar.html' %}
+<div class="sidenav">
+  <a href="{%url 'csstutorials' %}">CSS Introduction</a>
+  <a href="{%url 'csstutorials-syntax' %}">CSS Syntax</a>
+  <a href="{%url 'csstutorials-selectors' %}">CSS Selectors</a>
+  <a href="{%url 'csstutorials-comments' %}">CSS Comments</a>
+  <a href="{%url 'csstutorial-colors' %}">CSS Colors</a>
+  <a>CSS Backgrounds</a>
+  <a>CSS Borders</a>
+  <a>CSS Margins</a>
+</div>
+<div class="main">
+    <h3>CSS RGB Colors</h3>
+    <br>
+    <h3>RGB Value</h3>
+    <br>
+    <p>In CSS, a color can be specified as an RGB value, using this formula:
+    </p>
+    <br>
+    <p>rgb(red, green, blue)</p>
+</div>

@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block body %}
+{% include 'navbar.html' %}
+<div class="sidenav">
+  <a href="{%url 'csstutorials' %}">CSS Introduction</a>
+  <a href="{%url 'csstutorials-syntax' %}">CSS Syntax</a>
+  <a href="{%url 'csstutorials-selectors' %}">CSS Selectors</a>
+  <a href="{%url 'csstutorials-comments' %}">CSS Comments</a>
+  <a>CSS Colors</a>
+  <a>CSS Backgrounds</a>
+  <a>CSS Borders</a>
+  <a>CSS Margins</a>
+</div>
+<div class="main">
+    <h3>CSS Comments</h3>
+    <br>
+    <p>Comments are the statements in your code that are ignored by the compiler and are not executed. Comments are used to explain the code. They make the program more readable and understandable.
+    </p><br>
+    <strong>Syntax</strong>
+    <code><pre>
+        /* content */
+    </pre></code>
+    <p>Comment can be single line or multi-line.</p>
+    <br>
+    <p><strong>Note:</strong>The outputs are the same because comments are ignored by the browser and are not interpreted.
+    </p><br>
+    <p><strong>Example 1:</strong>This example describes the single line comment.
+    </p>
+    <code><pre>
+        h1{<br>
+        &nbsp;&nbsp;color: green;<br>
+        &nbsp;&nbsp;/* Single line comment */<br>
+        }
+    </pre></code>
+    <br>
+    <p><strong>Example 2:</strong>This example describes the multi-line comment.
+    </p><br>
+    <code><pre>
+        h1{<br>
+        &nbsp;&nbsp;color: green;<br>
+        &nbsp;&nbsp;/* This is a<br>
+        &nbsp;&nbsp;multiline comment */
+        }
+    </pre></code>
+    <br>
+    <p><strong>Supported Browsers</strong>The browsers supported by CSS comments are listed below:
+    </p>
+    <ul>
+        <li>Google Chrome</li>
+        <li>Internet Explorer</li>
+        <li>Firefox</li>
+        <li>Apple Safari</li>
+        <li>Opera</li>
+    </ul>
+</div>
+{% endblock %}
