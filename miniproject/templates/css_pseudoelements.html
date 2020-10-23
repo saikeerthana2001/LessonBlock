@@ -1,0 +1,346 @@
+{% extends 'base.html' %}
+{% block body %}
+{% include 'navbar.html' %}
+<div class="sidenav">
+  <a href="{%url 'csstutorials' %}">CSS Introduction</a>
+  <a href="{%url 'csstutorials-syntax' %}">CSS Syntax</a>
+  <a href="{%url 'csstutorials-selectors' %}">CSS Selectors</a>
+  <a href="{%url 'csstutorials-comments' %}">CSS Comments</a>
+  <a href="{%url 'csstutorials-borders' %}">CSS Borders</a>
+  <a href="{% url 'csstutorials-margins' %}">CSS Margins</a>
+    <a href="{% url 'csstutorials-boxmodel' %}">CSS Box Model</a>
+    <a href="{% url 'csstutorials-pseudoelements' %}">CSS Pseudo Elements</a>
+    <a href="{% url 'csstutorials-transitions' %}">CSS Transitions</a>
+    <a href="{% url 'csstutorials-animations' %}">CSS Animations</a>
+</div>
+<div class="main">
+    <h3>CSS Pseudo-elements</h3>
+    <br><h3>What are Pseudo-Elements?</h3><br>
+    <p>
+        A CSS pseudo-element is used to style specified parts of an element.<br>
+        For example, it can be used to:<br>
+        <ul>
+    <li>Style the first letter, or line, of an element</li>
+    <li>Insert content before, or after, the content of an element</li>
+</ul>
+    </p>
+    <h3>Syntax</h3><br>
+    <p>
+        The syntax of pseudo-elements:<br>
+    </p>
+    <code><pre>
+        selector::pseudo-element {<br>
+        &nbsp;&nbsp;property: value;<br>
+        }<br>
+    </pre></code>
+    <h3>The ::first-line Pseudo-element</h3><br>
+    <p>
+        The ::first-line pseudo-element is used to add a special style to the first line of a text.<br>
+        The following example formats the first line of the text in all &lt;p&gt; elements:<br>
+    </p>
+    <code><pre>
+        p::first-line {<br>
+        &nbsp;&nbsp;color: #ff0000;<br>
+        &nbsp;&nbsp;font-variant: small-caps;<br>
+        }<br>
+    </pre></code>
+    <strong>Note:</strong>The ::first-line pseudo-element can only be applied to block-level elements.<br>
+    <p>
+        The following properties apply to the ::first-line pseudo-element:<br>
+        <ul>
+    <li>font properties</li>
+    <li>color properties</li>
+    <li>background properties</li>
+    <li>word-spacing</li>
+    <li>letter-spacing</li>
+    <li>text-decoration</li>
+    <li>vertical-align</li>
+    <li>text-transform</li>
+    <li>line-height</li>
+    <li>clear</li>
+</ul>
+    </p>
+    <h3>The ::first-letter Pseudo-element</h3>
+    <p>
+      The ::first-letter pseudo-element is used to add a special style to the first letter of a text.<br>
+        The following example formats the first letter of the text in all &lt;p&gt; elements: <br>
+    </p>
+    <code><pre>
+        p::first-letter {<br>
+        &nbsp;&nbsp;color: #ff0000;<br>
+        &nbsp;&nbsp;font-size: xx-large;<br>
+        }<br>
+    </pre></code>
+    <p><strong>Note:</strong>The ::first-letter pseudo-element can only be applied to block-level elements.<br>
+    The following properties apply to the ::first-letter pseudo- element: <br>
+        <ul>
+    <li>font properties</li>
+    <li>color properties </li>
+    <li>background properties</li>
+    <li>margin properties</li>
+    <li>padding properties</li>
+    <li>border properties</li>
+    <li>text-decoration</li>
+    <li>vertical-align (only if "float" is "none")</li>
+    <li>text-transform</li>
+    <li>line-height</li>
+    <li>float</li>
+    <li>clear</li>
+</ul>
+    </p>
+    <h3>Pseudo-elements and CSS Classes</h3><br>
+    <p>Pseudo-elements can be combined with CSS classes: </p>
+    <code><pre>
+        p.intro::first-letter {<br>
+        &nbsp;&nbsp;color: #ff0000;<br>
+        &nbsp;&nbsp;font-size: 200%;<br>
+        }<br>
+    </pre></code>
+    The example above will display the first letter of paragraphs with class="intro", in red and in a larger size.<br>
+    <h3>Multiple Pseudo-elements</h3><br>
+    <p>
+        Several pseudo-elements can also be combined.<br>
+        In the following example, the first letter of a paragraph will be red, in an xx-large font size. The rest of the first line will be blue, and in small-caps. The rest of the paragraph will be the default font size and color:<br>
+    </p>
+    <code><pre>
+        p::first-letter {<br>
+  &nbsp;&nbsp;color: #ff0000;<br>
+  &nbsp;&nbsp;font-size: xx-large;<br>
+}<br>
+        p::first-line {<br>
+  &nbsp;&nbsp;color: #0000ff;<br>
+  &nbsp;&nbsp;font-variant: small-caps;<br>
+}<br>
+    </pre></code>
+    <h3>CSS - The ::before Pseudo-element</h3><br>
+    <p>
+        The ::before pseudo-element can be used to insert some content before the content of an element.<br>
+        The following example inserts an image before the content of each &lt;h1&gt; element:<br>
+    </p>
+    <code><pre>
+        h1::before {<br>
+  &nbsp;&nbsp;content: url(smiley.gif);<br>
+}<br>
+    </pre></code>
+    <h3>CSS - The ::after Pseudo-element</h3><br>
+    <p>
+        The ::after pseudo-element can be used to insert some content after the content of an element.<br>
+        The following example inserts an image after the content of each &lt;h1&gt; element:<br>
+    </p>
+    <code><pre>
+        h1::after {<br>
+  &nbsp;&nbsp;content: url(smiley.gif);<br>
+}<br>
+    </pre></code>
+    <h3>CSS - The ::selection Pseudo-element</h3><br>
+    <p>
+        The ::selection pseudo-element matches the portion of an element that is selected by a user.<br>
+        The following CSS properties can be applied to ::selection: color, background, cursor, and outline.<br>
+        The following example makes the selected text red on a yellow background:<br>
+    </p>
+    <code><pre>
+        ::selection {<br>
+  &nbsp;&nbsp;color: red;<br>
+  &nbsp;&nbsp;background: yellow;<br>
+}<br>
+    </pre></code>
+    <br>
+<h3>All CSS Pseudo Elements</h3>
+<table>
+  <tr>
+    <th style="width:20%">Selector</th>
+    <th style="width:20%">Example</th>
+    <th>Example description</th>
+  </tr>
+<tr>
+    <td>::after</td>
+    <td>p::after</td>
+    <td>Insert something after the content of each &lt;p&gt; element</td>
+    </tr>
+<tr>
+    <td>::before</td>
+    <td>p::before</td>
+    <td>Insert something before the content of each &lt;p&gt; element</td>
+    </tr>
+<tr>
+    <td>::first-letter</td>
+    <td>p::first-letter</td>
+    <td>Selects the first letter of each &lt;p&gt; element</td>
+  </tr>
+<tr>
+    <td>::first-line</td>
+    <td>p::first-line</td>
+    <td>Selects the first line of each &lt;p&gt; element</td>
+  </tr>
+<tr>
+    <td>::selection</td>
+    <td>p::selection</td>
+    <td>Selects the portion of an element that is selected by a user</td>
+  </tr>
+</table>
+<br>
+<h3>All CSS Pseudo Classes</h3>
+<table>
+  <tr>
+    <th style="width:20%">Selector</th>
+    <th style="width:20%">Example</th>
+    <th>Example description</th>
+  </tr>
+  <tr>
+    <td>>:active</td>
+    <td>a:active</td>
+    <td>Selects the active link</td>
+  </tr>
+  <tr>
+    <td>:checked</td>
+    <td>input:checked</td>
+    <td>Selects every checked &lt;input&gt; element</td>
+  </tr>
+  <tr>
+    <td>>:disabled</a></td>
+    <td>input:disabled</td>
+    <td>Selects every disabled &lt;input&gt; element</td>
+  </tr>
+  <tr>
+    <td>:empty</td>
+    <td>p:empty</td>
+    <td>Selects every &lt;p&gt; element that has no children</td>
+  </tr>
+  <tr>
+    <td>:enable</td>
+    <td>input:enabled</td>
+    <td>Selects every enabled &lt;input&gt; element</td>
+  </tr>
+  <tr>
+    <td>:first-child</td>
+    <td>p:first-child</td>
+    <td>Selects every &lt;p&gt; elements that is the first child of its parent</td>
+  </tr>
+  <tr>
+    <td>>:first-of-type</td>
+    <td>p:first-of-type</td>
+    <td>Selects every &lt;p&gt; element that is the first &lt;p&gt; element of its parent</td>
+  </tr>
+  <tr>
+    <td>:focus</td>
+    <td>input:focus</td>
+    <td>Selects the &lt;input&gt; element that has focus</td>
+  </tr>
+  <tr>
+    <td>:hover</td>
+    <td>a:hover</td>
+    <td>Selects links on mouse over</td>
+  </tr>
+  <tr>
+    <td>:in-range</td>
+    <td>input:in-range</td>
+    <td>Selects &lt;input&gt; elements with a value within a specified range</td>
+  </tr>
+  <tr>
+    <td>:invalid</td>
+    <td>input:invalid</td>
+    <td>Selects all &lt;input&gt; elements with an invalid value</td>
+  </tr>
+  <tr>
+    <td>:lang(<i>language</i>)</td>
+    <td>p:lang(it)</td>
+    <td>Selects every &lt;p&gt; element with a lang attribute value starting with &quot;it&quot;</td>
+  </tr>
+  <tr>
+    <td>:last-child</td>
+    <td>p:last-child</td>
+    <td>Selects every &lt;p&gt; elements that is the last child of its parent</td>
+  </tr>
+  <tr>
+    <td>:last-of-type</td>
+    <td>p:last-of-type</td>
+    <td>Selects every &lt;p&gt; element that is the last &lt;p&gt; element of its parent</td>
+  </tr>
+  <tr>
+    <td>:link</td>
+    <td>a:link</td>
+    <td>Selects all unvisited links</td>
+  </tr>
+  <tr>
+    <td>:not(selector)</td>
+    <td>:not(p)</td>
+    <td>Selects every element that is not a &lt;p&gt; element</td>
+  </tr>
+  <tr>
+    <td>:nth-child(n)</td>
+    <td>p:nth-child(2)</td>
+    <td>Selects every &lt;p&gt; element that is the second child of its parent</td>
+  </tr>
+  <tr>
+    <td>:nth-last-child(n)</td>
+    <td>p:nth-last-child(2)</td>
+    <td>Selects every &lt;p&gt; element that is the second child of its parent, counting from the last child</td>
+  </tr>
+  <tr>
+    <td>:nth-last-of-type(n)</td>
+    <td>p:nth-last-of-type(2)</td>
+    <td>Selects every &lt;p&gt; element that is the second &lt;p&gt; element of its parent, counting from the last child</td>
+  </tr>
+  <tr>
+    <td>:nth-of-type(n)</td>
+    <td>p:nth-of-type(2)</td>
+    <td>Selects every &lt;p&gt; element that is the second &lt;p&gt; element of its parent</td>
+  </tr>
+  <tr>
+    <td>:only-of-type</td>
+    <td>p:only-of-type</td>
+    <td>Selects every &lt;p&gt; element that is the only &lt;p&gt; element of its parent</td>
+  </tr>
+  <tr>
+    <td>:only-child</td>
+    <td>p:only-child</td>
+    <td>Selects every &lt;p&gt; element that is the only child of its parent</td>
+  </tr>
+  <tr>
+    <td>:optional</td>
+    <td>input:optional</td>
+    <td>Selects &lt;input&gt; elements with no &quot;required&quot; attribute</td>
+  </tr>
+  <tr>
+    <td>:out-of-range</td>
+    <td>input:out-of-range</td>
+    <td>Selects &lt;input&gt; elements with a value outside a specified range</td>
+  </tr>
+  <tr>
+    <td>:read-only</td>
+    <td>input:read-only</td>
+    <td>Selects &lt;input&gt; elements with a &quot;readonly&quot; attribute specified</td>
+  </tr>
+  <tr>
+    <td>:read-write</td>
+    <td>input:read-write</td>
+    <td>Selects &lt;input&gt; elements with no &quot;readonly&quot; attribute</td>
+  </tr>
+  <tr>
+    <td>:required</td>
+    <td>input:required</td>
+    <td>Selects &lt;input&gt; elements with a &quot;required&quot; attribute specified</td>
+  </tr>
+  <tr>
+    <td>:root</td>
+    <td>root</td>
+    <td>Selects the document's root element</td>
+  </tr>
+  <tr>
+    <td>:target</td>
+    <td>#news:target</td>
+    <td>Selects the current active #news element (clicked on a URL containing that anchor name)</td>
+  </tr>
+  <tr>
+    <td>:valid</td>
+    <td>input:valid</td>
+    <td>Selects all &lt;input&gt; elements with a valid value</td>
+  </tr>
+  <tr>
+    <td>>:visited</td>
+    <td>a:visited</td>
+    <td>Selects all visited links</td>
+  </tr>
+</table>
+</div>
+{% endblock %}

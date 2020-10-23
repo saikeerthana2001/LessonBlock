@@ -1,0 +1,154 @@
+{% extends 'base.html' %}
+{% block body %}
+{% include 'navbar.html' %}
+<div class="sidenav">
+  <a href="{%url 'csstutorials' %}">CSS Introduction</a>
+  <a href="{%url 'csstutorials-syntax' %}">CSS Syntax</a>
+  <a href="{%url 'csstutorials-selectors' %}">CSS Selectors</a>
+  <a href="{%url 'csstutorials-comments' %}">CSS Comments</a>
+  <a href="{%url 'csstutorials-borders' %}">CSS Borders</a>
+  <a href="{% url 'csstutorials-margins' %}">CSS Margins</a>
+    <a href="{% url 'csstutorials-boxmodel' %}">CSS Box Model</a>
+    <a href="{% url 'csstutorials-pseudoelements' %}">CSS Pseudo Elements</a>
+    <a href="{% url 'csstutorials-transitions' %}">CSS Transitions</a>
+    <a href="{% url 'csstutorials-animations' %}">CSS Animations</a>
+</div>
+<div class="main">
+    <h3>CSS Transitions</h3><br>
+    <p>
+        CSS transitions allows you to change property values smoothly, over a given duration.<br>
+        In this chapter you will learn about the following properties:<br>
+    </p>
+    <ul>
+        <li>transition</li>
+        <li>transition-delay</li>
+        <li>transition-duration</li>
+        <li>transition-property</li>
+        <li>transition-timing-function</li>
+    </ul>
+    <br>
+    <h3>How to Use CSS Transitions?</h3><br>
+    <p>
+        To create a transition effect, you must specify two things:<br>
+        <ul>
+    <li>the CSS property you want to add an effect to</li>
+    <li>the duration of the effect</li>
+</ul>
+    <br>
+    <strong>Note:</strong>If the duration part is not specified, the transition will have no effect, because the default value is 0.<br>
+    The following example shows a 100px * 100px red &lt;div&gt; element. The &lt;div&gt; element has also specified a transition effect for the width property, with a duration of 2 seconds:<br>
+    </p>
+    <code><pre>
+        div {<br>
+  &nbsp;&nbsp;width: 100px;<br>
+  &nbsp;&nbsp;height: 100px;<br>
+  &nbsp;&nbsp;background: red;<br>
+  &nbsp;&nbsp;transition: width 2s;<br>
+}<br>
+    </pre></code>
+    <p>
+        The transition effect will start when the specified CSS property (width) changes value.<br>
+        Now, let us specify a new value for the width property when a user mouses over the &lt;div&gt; element:<br>
+    </p>
+    <code><pre>
+       div:hover {<br>
+  &nbsp;&nbsp;width: 300px;<br>
+} <br>
+    </pre></code>
+    Notice that when the cursor mouses out of the element, it will gradually change back to its original style.<br>
+    <h3>Change Several Property Values</h3><br>
+    <p>
+        The following example adds a transition effect for both the width and height property, with a duration of 2 seconds for the width and 4 seconds for the height:
+    </p>
+    <code><pre>
+        div {<br>
+  &nbsp;&nbsp;transition: width 2s, height 4s;<br>
+}<br>
+    </pre></code>
+    <h3>Specify the Speed Curve of the Transition</h3><br>
+    <p>
+       The transition-timing-function property specifies the speed curve of the transition effect.<br>
+        The transition-timing-function property can have the following values:<br>
+        <ul>
+    <li><strong>ease - </strong>specifies a transition effect with a slow start, then fast, then end slowly (this is default)</li>
+    <li><strong>linear -</strong>specifies a transition effect with the same speed from start to end</li>
+    <li><strong>ease-in - </strong>specifies a transition effect with a slow start</li>
+    <li><strong>ease-out -</strong>specifies a transition effect with a slow end</li>
+    <li><strong>ease-in-out -</strong>specifies a transition effect with a slow start and end</li>
+    <li><strong>cubic-bezier(n,n,n,n) -</strong>lets you define your own values in a cubic-bezier function</li>
+</ul>
+    </p>
+    The following example shows the some of the different speed curves that can be used:<br>
+    <code><pre>
+        #div1 {transition-timing-function: linear;}<br>
+#div2 {transition-timing-function: ease;}<br>
+#div3 {transition-timing-function: ease-in;}<br>
+#div4 {transition-timing-function: ease-out;}<br>
+#div5 {transition-timing-function: ease-in-out;}<br>
+    </pre></code>
+    <h3>Delay the Transition Effect</h3><br>
+    <p>
+        The transition-delay property specifies a delay (in seconds) for the transition effect.<br>
+        The following example has a 1 second delay before starting:<br>
+    </p>
+    <code><pre>
+        div {<br>
+  &nbsp;&nbsp;transition-delay: 1s;<br>
+}<br>
+    </pre></code>
+    <h3>Transition + Transformation</h3><br>
+    <p>
+        The following example adds a transition effect to the transformation:<br>
+    </p>
+    <code><pre>
+        div {<br>
+  &nbsp;&nbsp;transition: width 2s, height 2s, transform 2s;<br>
+}<br>
+    </pre></code>
+    <h3>More Transition Examples</h3><br>
+    <p>The CSS transition properties can be specified one by one, like this:</p>
+    <code><pre>
+        div {<br>
+  &nbsp;&nbsp;transition-property: width;<br>
+  &nbsp;&nbsp;transition-duration: 2s;<br>
+  &nbsp;&nbsp;transition-timing-function: linear;<br>
+  &nbsp;&nbsp;transition-delay: 1s;<br>
+}<br>
+    </pre></code>
+    or by using the shorthand property transition:<br>
+    <code><pre>
+        div {<br>
+  &nbsp;&nbsp;transition: width 2s linear 1s;<br>
+}<br>
+    </pre></code>
+    <h3>CSS Transition Properties</h3>
+    <p>The following table lists all the CSS transition properties:</p>
+    <table>
+  <tr>
+    <th>Property</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>transition</td>
+    <td>A shorthand property for setting the four transition properties into a single property</td>
+  </tr>
+<tr>
+    <td>transition-delay</td>
+    <td>Specifies a delay (in seconds) for the transition effect</td>
+    </tr>
+<tr>
+    <td>transition-duration</td>
+    <td>Specifies how many seconds or milliseconds a transition effect takes to complete</td>
+   </tr>
+<tr>
+   <td>transition-property</td>
+   <td>Specifies the name of the CSS property the transition effect is for</td>
+  </tr>
+<tr>
+   <td>transition-timing-function</td>
+   <td>Specifies the speed curve of the transition effect</td>
+  </tr>
+</table>
+
+</div>
+{% endblock %}

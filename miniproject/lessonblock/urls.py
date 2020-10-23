@@ -15,6 +15,12 @@ urlpatterns = [
     path('csstutorials/syntax',csstutorialssyntax,name='csstutorials-syntax'),
     path('csstutorials/selectors',csstutorialsselectors,name='csstutorials-selectors'),
     path('csstutorials/comments',csstutorialscomments,name='csstutorials-comments'),
-    path('csstutorials/colors',csstutorialscolors,name='csstutorials-colors'),
+    path('csstutorials/borders',csstutorialsborders,name='csstutorials-borders'),
+    path('csstutorials/margins',csstutorialsmargins,name='csstutorials-margins'),
+    path('csstutorials/boxmodel',csstutorialsboxmodel,name='csstutorials-boxmodel'),
+    path('csstutorials/position',csstutorialsposition,name='csstutorials-position'),
+    path('csstutorials/pseudoelements',csstutorialspseudoelements,name="csstutorials-pseudoelements"),
+    path('csstutorials/transitions',csstutorialstransitions,name="csstutorials-transitions"),
+    path('csstutorials/animations',csstutorialsanimations,name="csstutorials-animations"),
 
 ]

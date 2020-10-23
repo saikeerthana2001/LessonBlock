@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block body %}
+{% include 'navbar.html' %}
+<div class="sidenav">
+  <a href="{%url 'csstutorials' %}">CSS Introduction</a>
+  <a href="{%url 'csstutorials-syntax' %}">CSS Syntax</a>
+  <a href="{%url 'csstutorials-selectors' %}">CSS Selectors</a>
+  <a href="{%url 'csstutorials-comments' %}">CSS Comments</a>
+  <a href="{%url 'csstutorials-borders' %}">CSS Borders</a>
+  <a href="{% url 'csstutorials-margins' %}">CSS Margins</a>
+    <a href="{% url 'csstutorials-boxmodel' %}">CSS Box Model</a>
+    <a href="{% url 'csstutorials-position' %}">CSS Position</a>
+    <a href="{% url 'csstutorials-pseudoelements' %}">CSS Pseudo Elements</a>
+    <a href="{% url 'csstutorials-transitions' %}">CSS Transitions</a>
+    <a href="{% url 'csstutorials-animations' %}">CSS Animations</a>
+</div>
+<div class="main">
+    <h3>CSS Box Model</h3><br>
+    <h4>The CSS Box Model</h4><br>
+    <p>
+        All HTML elements can be considered as boxes. In CSS, the term "box model" is used when talking about design and layout.<br>
+        The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content. <br>
+        Explanation of the different parts:<br>
+        <ul>
+    <li><strong>Content -</strong>The content of the box, where text and images appear</li>
+    <li><strong>Padding -</strong>Clears an area around the content. The padding is transparent</li>
+    <li><strong>Border -</strong>A border that goes around the padding and content</li>
+    <li><strong>Margin -</strong>Clears an area outside the border. The margin is transparent</li>
+</ul>
+    The box model allows us to add a border around elements, and to define space between elements. <br>
+    </p>
+    <code><pre>
+        div{<br>
+        &nbsp;&nbsp;width: 300px;<br>
+        &nbsp;&nbsp;border: 15px solid green;<br>
+        &nbsp;&nbsp;padding: 50px;<br>
+        &nbsp;&nbsp;margin: 20px;<br>
+        }
+    </pre></code>
+    <h3>Width and Height of an Element</h3><br>
+    <p>
+    In order to set the width and height of an element correctly in all browsers, you need to know how the box model works.<br>
+    <strong>Important:</strong>When you set the width and height properties of an element with CSS, you just set the width and height of the content area. To calculate the full size of an element, you must also add padding, borders and margins.<br>
+    </p>
+    <code><pre>
+        div{<br>
+        &nbsp;&nbsp;width: 320px;<br>
+        &nbsp;&nbsp;padding: 10px;<br>
+        &nbsp;&nbsp;border: 5px solid gray;<br>
+        &nbsp;&nbsp;margin: 0;<br>
+        }
+    </pre></code>
+    <p>
+        The total width of an element should be calculated like this:<br>
+        Total element width = width + left padding + right padding + left border + right border + left margin + right margin<br>
+        <br>
+        The total height of an element should be calculated like this:<br>
+        Total element height = height + top padding + bottom padding + top border + bottom border + top margin + bottom margin
+    </p>
+
+</div>
+{% endblock %}

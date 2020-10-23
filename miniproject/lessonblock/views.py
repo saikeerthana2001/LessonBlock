@@ -25,8 +25,20 @@ def csstutorialsselectors(request):
     return render(request,"css_selectors.html")
 def csstutorialscomments(request):
     return render(request,"css_comments.html")
-def csstutorialscolors(request):
-    return render(request,"css_colors.html")
+def csstutorialsborders(request):
+    return render(request,"css_borders.html")
+def csstutorialsmargins(request):
+    return render(request, "css_margins.html")
+def csstutorialsboxmodel(request):
+    return render(request, "css_boxmodel.html")
+def csstutorialsposition(request):
+    return render(request, "css_position.html")
+def csstutorialspseudoelements(request):
+    return render(request, "css_pseudoelements.html")
+def csstutorialstransitions(request):
+    return render(request, "css_transitions.html")
+def csstutorialsanimations(request):
+    return render(request, "css_animations.html")
 
 def htmltutorialstextformatting(request):
     return render(request,"htmltutorials-textformatting.html")
