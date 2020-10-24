@@ -39,10 +39,17 @@ def csstutorialstransitions(request):
     return render(request, "css_transitions.html")
 def csstutorialsanimations(request):
     return render(request, "css_animations.html")
-
 def htmltutorialstextformatting(request):
     return render(request,"htmltutorials-textformatting.html")
 def htmltutorialscitationtags(request):
     return render(request,"htmltutorials-citationtags.html")
+def jstutorials(request):
+    return render(request,"jstutorials.html")
+def jstutorialsoutput(request):
+    return render(request,"js_output.html")
+def jstutorialsstatements(request):
+    return render(request,"js_statements.html")
+def jstutorialssyntax(request):
+    return render(request, "js_syntax.html")
 
 

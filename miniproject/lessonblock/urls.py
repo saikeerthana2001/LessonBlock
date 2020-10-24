@@ -22,5 +22,9 @@ urlpatterns = [
     path('csstutorials/pseudoelements',csstutorialspseudoelements,name="csstutorials-pseudoelements"),
     path('csstutorials/transitions',csstutorialstransitions,name="csstutorials-transitions"),
     path('csstutorials/animations',csstutorialsanimations,name="csstutorials-animations"),
+    path('jstutorials/',jstutorials,name="jstutorials"),
+    path('jstutorials/output',jstutorialsoutput,name="jstutorials-output"),
+    path('jstutorials/statements',jstutorialsstatements,name="jstutorials-statements"),
+    path('jstutorials/syntax',jstutorialssyntax,name='jstutorials-syntax'),
 
 ]

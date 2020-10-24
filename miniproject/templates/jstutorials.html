@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block body %}
+{% include 'navbar.html' %}
+<div class="sidenav">
+  <a href="{%url 'jstutorials' %}">JS Introduction</a>
+    <a href="{% url 'jstutorials-output' %}">JS Output</a>
+    <a href="{% url 'jstutorials-statements' %}">JS Statements</a>
+    <a href="{% url 'jstutorials-syntax' %}">JS Syntax</a>
+</div>
+<div class="main">
+    <h3>What is JavaScript?</h3><br>
+    <p>JavaScript is a lightweight, cross-platform and interpreted scripting language. It is well-known for the development of web pages, many non-browser environments also use it. JavaScript can be used for Client-side developments as well as Server-side developments.<br>
+    </p>
+    <h3>Features of JavaScript</h3><br>
+    <ul>
+        <li>JavaScript was created in the first place for DOM manipulation. Earlier websites were mostly static, after JS was created dynamic Web sites were made.</li>
+        <li>Functions in JS are objects. They may have properties and methods just like another object. They can be passed as arguments in other functions.</li>
+        <li>Can handle date and time.</li>
+        <li>Performs Form Validation although the forms are created using HTML.</li>
+        <li>No compiler needed.</li>
+    </ul><br>
+    <h3>Why Study JavaScript?</h3><br>
+    <p>JavaScript is one of the 3 languages all web developers must learn:<br>
+    <ol>
+    <li>HTML to define the content of web pages</li>
+    <li>CSS to specify the layout of web pages</li>
+    <li>JavaScript to program the behavior of web pages</li>
+</ol></p>
+</div>
+{% endblock %}

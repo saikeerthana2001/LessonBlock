@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block body %}
+{% include 'navbar.html' %}
+<div class="sidenav">
+  <a href="{%url 'jstutorials' %}">JS Introduction</a>
+    <a href="{% url 'jstutorials-output' %}">JS Output</a>
+    <a href="{% url 'jstutorials-statements' %}">JS Statements</a>
+    <a href="{% url 'jstutorials-syntax' %}">JS Syntax</a>
+</div>
+<div class="main">
+    <h3>JS Syntax</h3><br>
+    <p>JavaScript syntax is the set of rules, how JavaScript programs are constructed:</p>
+    <code><pre>
+        var x, y, z;&nbsp;&nbsp;
+    </pre></code>
+</div>
