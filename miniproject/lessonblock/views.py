@@ -51,5 +51,7 @@ def jstutorialsstatements(request):
     return render(request,"js_statements.html")
 def jstutorialssyntax(request):
     return render(request, "js_syntax.html")
+def cssexamples(request):
+    return render(request,"css_examples.html")
 
 

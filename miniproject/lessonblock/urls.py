@@ -26,5 +26,6 @@ urlpatterns = [
     path('jstutorials/output',jstutorialsoutput,name="jstutorials-output"),
     path('jstutorials/statements',jstutorialsstatements,name="jstutorials-statements"),
     path('jstutorials/syntax',jstutorialssyntax,name='jstutorials-syntax'),
+    path('cssexamples/',cssexamples,name="cssexamples"),
 
 ]
