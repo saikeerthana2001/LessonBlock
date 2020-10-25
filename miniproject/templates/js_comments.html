@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block body %}
+{% include 'navbar.html' %}
+<div class="sidenav">
+  <a href="{%url 'jstutorials' %}">JS Introduction</a>
+    <a href="{% url 'jstutorials-output' %}">JS Output</a>
+    <a href="{% url 'jstutorials-statements' %}">JS Statements</a>
+    <a href="{% url 'jstutorials-syntax' %}">JS Syntax</a>
+    <a href="{% url 'jstutorials-comments' %}">JS Comments</a>
+    <a href="{% url 'jstutorials-arithmetic' %}">JS Arithmetic</a>
+    <a href="{% url 'jstutorials-functions' %}">JS Functions</a>
+    <a href="{% url 'jstutorials-arrays' %}">JS Arrays</a>
+</div>
+<div class="main">
+    <p>JavaScript comments can be used to explain JavaScript code, and to make it more readable.<br>
+    JavaScript comments can also be used to prevent execution, when testing alternative code.
+    </p>
+    <h3>Single Line Comments</h3><br>
+    <p>
+    Single line comments start with //.<br>
+        Any text between // and the end of the line will be ignored by JavaScript (will not be executed).<br>
+        This example uses a single-line comment before each code line:
+    </p>
+    <pre><code>
+    // Change heading:
+    </code></pre>
+    <br>
+    <h3>Multi-line Comments</h3><br>
+    <p>Multi-line comments start with /* and end with */.<br>
+    Any text between /* and */ will be ignored by JavaScript.<br>
+    This example uses a multi-line comment (a comment block) to explain the code:
+    </p>
+    <pre><code>
+     /*
+    The code below will change
+    the heading with id = "myH"
+    and the paragraph with id = "myP"
+    in my web page:
+    */
+    </code></pre>
+    <br>
+    <p class="note">It is most common to use single line comments.<br>
+Block comments are often used for formal documentation.</p>
+</div>
+<br>
+{% endblock %}

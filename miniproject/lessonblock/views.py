@@ -63,6 +63,14 @@ def htmltutorialsinline(request):
     return render(request,"htmltutorials-inline.html")
 def htmltutorialsforms(request):
     return render(request,"htmltutorials-forms.html")
+def jstutorialscomments(request):
+    return render(request, "js_comments.html")
+def jstutorialsarithmetic(request):
+    return render(request,"js-arithmetic.html")
+def jstutorialsfunctions(request):
+    return render(request,"js_func.html")
+def jstutorialsarrays(request):
+    return render(request,"js_arrays.html")
 
 
 

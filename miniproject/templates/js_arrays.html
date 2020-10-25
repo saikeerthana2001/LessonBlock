@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block body %}
+{% include 'navbar.html' %}
+<div class="sidenav">
+  <a href="{%url 'jstutorials' %}">JS Introduction</a>
+    <a href="{% url 'jstutorials-output' %}">JS Output</a>
+    <a href="{% url 'jstutorials-statements' %}">JS Statements</a>
+    <a href="{% url 'jstutorials-syntax' %}">JS Syntax</a>
+    <a href="{% url 'jstutorials-comments' %}">JS Comments</a>
+    <a href="{% url 'jstutorials-arithmetic' %}">JS Arithmetic</a>
+    <a href="{% url 'jstutorials-functions' %}">JS Functions</a>
+    <a href="{% url 'jstutorials-arrays' %}">JS Arrays</a>
+</div>
+<div class="main">
+    <h3>JavaScript Arrays</h3><br>
+    <p>JavaScript arrays are used to store multiple values in a single variable.</p>
+    <pre><code>
+var cars = ["Saab", "Volvo", "BMW"];
+    </code></pre>
+    <h3>What is an Array?</h3><br>
+    <p>An array is a special variable, which can hold more than one value at a time.<br>
+    If you have a list of items (a list of car names, for example), storing the cars in single variables could look like this:
+    </p>
+    <pre><code>
+var car1 = "Saab";
+var car2 = "Volvo";
+var car3 = "BMW";
+    </code></pre>
+    <p>However, what if you want to loop through the cars and find a specific one? And what if you had not 3 cars, but 300?<br>
+    The solution is an array!<br>
+        An array can hold many values under a single name, and you can access the values by referring to an index number.<br>
+    </p>
+    <h3>Creating an Array</h3><br>
+    <p>Using an array literal is the easiest way to create a JavaScript Array.<br>
+    Syntax:<br>
+    </p>
+    <pre><code>
+var array_name = [item1, item2, ...];
+    </code></pre>
+<h3>Access the Elements of an Array</h3><br>
+<p>You access an array element by referring to the index number.<br>
+This statement accesses the value of the first element in cars:
+</p>
+    <pre><code>
+var name = cars[0];
+    </code></pre>
+    <h3>Changing an Array Element</h3><br>
+    <p>This statement changes the value of the first element in cars:</p>
+    <pre><code>
+ cars[0] = "Opel";
+    </code></pre>
+    <h3>Access the Full Array</h3><br>
+    <p>With JavaScript, the full array can be accessed by referring to the array name:</p>
+    <pre><code>
+var cars = ["Saab", "Volvo", "BMW"];
+document.getElementById("demo").innerHTML = cars;
+    </code></pre>
+</div>
+{% endblock %}

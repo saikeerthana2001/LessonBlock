@@ -3,7 +3,7 @@
 {% include 'navbar.html' %}
 <style>
 .collapsible {
-  background-color: #777;
+  background-color: #325C74;
   color: white;
   cursor: pointer;
   padding: 18px;
@@ -15,7 +15,7 @@
 }
 
 .active, .collapsible:hover {
-  background-color: #555;
+  background-color: #10383C;
 }
 
 .content {
@@ -91,15 +91,157 @@ p {
 &lt;/html&gt;
 </code></pre>
 </div>
-<button class="collapsible">Open Section 3</button>
+<button class="collapsible">Class Selector</button>
 <div class="content">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+.center {
+  text-align: center;
+  color: red;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1 class="center"&gt;Red and center-aligned heading&lt;/h1&gt;
+&lt;p class="center"&gt;Red and center-aligned paragraph.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
 </div>
+<br>
+<h3>CSS How to/Where to</h3>
 </div>
-<button class="collapsible">Open Section 3</button>
+<button class="collapsible">External, Internal and Inline CSS</button>
 <div class="content">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<strong>External CSS</strong><br>
+<pre><code>
+&lt;head&gt;
+&lt;link rel="stylesheet" href="mystyle.css"&gt;
+&lt;/head&gt;
+</code></pre>
+<br>
+<strong>Internal CSS</strong>
+<br>
+<pre><code>
+&lt;style&gt;
+body {
+  background-color: linen;
+}
+&lt;/style&gt;
+</code></pre>
+<br>
+Inline CSS<br>
+<pre><code>
+&lt;h1 style="color:blue;text-align:center;"&gt;This is a heading&lt;/h1&gt;
+</code></pre>
 </div>
+<br>
+<h3>CSS Comments</h3><br>
+<button class="collapsible">Single and Multi-line Comments</button>
+<div class="content">
+Single line comment <br>
+    <pre><code>
+/* This is a single-line comment */
+        </code></pre>
+Multi-line comments<br>
+    <pre><code>
+/* This is
+a multi-line
+comment */
+        </code></pre>
+</div>
+<br>
+<h3>CSS Colors</h3>
+<button class="collapsible">Background color</button>
+<div class="content">
+<pre><code>
+&lt;h1 style="background-color:DodgerBlue;"&gt;Hello World&lt;/h1&gt;
+</code></pre>
+</div>
+<button class="collapsible">Text Color</button>
+<div class="content">
+<pre><code>
+&h3 style="color:Tomato;">Hello World&lt;/h3&gt;
+</code></pre>
+</div>
+<button class="collapsible">Border Color</button>
+<div class="content">
+<pre><code>
+&lt;h1 style="border: 2px solid Tomato;"&gt;Hello World&lt;/h1&gt;
+</code></pre>
+</div>
+<br>
+<h3>CSS Box Model</h3><br>
+<button class="collapsible">Demonstrating box model</button>
+<div class="content">
+<pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+div {
+  background-color: lightgrey;
+  width: 300px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h2&gt;Demonstrating the Box Model&lt;/h2&gt;
+&lt;p&gt;The CSS box model is essentially a box that wraps around every HTML element. It consists of: borders, padding, margins, and the actual content.&lt;/p&gt;
+&lt;div&gt;This text is the content of the box. We have added a 50px padding, 20px margin and a 15px green border.&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</div>
+<br>
+<h3>CSS Pseudo-classes</h3><br>
+<button class="collapsible">Use of :focus</button>
+<div class="content">
+<pre><code>
+&lt;style&gt;
+input:focus {
+  background-color: yellow;
+}
+&lt;/style&gt;
+</code></pre>
+</div>
+<button class="collapsible">:first-child - match the first p element</button>
+<div class="content">
+<pre><code>
+&lt;style&gt;
+p:first-child {
+  color: blue;
+}
+&lt;/style&gt;
+</code></pre>
+</div>
+<button class="collapsible">:first-child - match the first i element in all p elements</button>
+<div class="content">
+<pre><code>
+&lt;style&gt;
+p i:first-child {
+  color: blue;
+}
+&lt;/style&gt;
+</code></pre>
+</div>
+<button class="collapsible">:first-child - match all i elements in all first child p elements</button>
+<div class="content">
+<pre><code>
+&lt;style&gt;
+p:first-child i {
+  color: blue;
+}
+&lt;/style&gt;
+</code></pre>
+</div>
+<br>
 <script>
 var coll = document.getElementsByClassName("collapsible");
 var i;
@@ -116,6 +258,4 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 </script>
-
-
 {% endblock %}

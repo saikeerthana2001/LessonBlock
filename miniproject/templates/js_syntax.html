@@ -6,11 +6,46 @@
     <a href="{% url 'jstutorials-output' %}">JS Output</a>
     <a href="{% url 'jstutorials-statements' %}">JS Statements</a>
     <a href="{% url 'jstutorials-syntax' %}">JS Syntax</a>
+        <a href="{% url 'jstutorials-comments' %}">JS Comments</a>
+    <a href="{% url 'jstutorials-arithmetic' %}">JS Arithmetic</a>
+    <a href="{% url 'jstutorials-functions' %}">JS Functions</a>
+    <a href="{% url 'jstutorials-arrays' %}">JS Arrays</a>
 </div>
 <div class="main">
     <h3>JS Syntax</h3><br>
     <p>JavaScript syntax is the set of rules, how JavaScript programs are constructed:</p>
     <code><pre>
-        var x, y, z;&nbsp;&nbsp;
+        var x, y, z;
+        x = 5; y = 6;
+        z = x + y;
     </pre></code>
+    <br>
+    <h3>JavaScript Values</h3><br>
+    <p>The JavaScript syntax defines two types of values:<br>
+    <ul>
+    <li>Fixed values</li>
+    <li>Variable values</li>
+    </ul>
+    Fixed values are called Literals.<br>
+    Variable values are called Variables.<br>
+    </p><br>
+    <h3>JavaScript Literals</h3>
+    <p>The two most important syntax rules for fixed values are:<br>
+    <ul>
+    <li>Numbers are written with or without decimals</li>
+    <li>Strings are text, written within double or single quotes</li>
+</ul>
+    </p>
+    <h3>JavaScript Variables</h3><br>
+    <p>In a programming language, variables are used to store data values.
+    <br>
+    JavaScript uses the var keyword to declare variables.<br>
+     An equal sign is used to assign values to variables.<br>
+      In this example, x is defined as a variable. Then, x is assigned (given) the value 6:<br>
+    </p>
+    <pre><code>
+        var x;
+        x = 6;
+    </code></pre>
 </div>
+{% endblock %}

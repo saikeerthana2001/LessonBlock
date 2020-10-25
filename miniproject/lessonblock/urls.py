@@ -32,4 +32,8 @@ urlpatterns = [
     path('htmltutorials/blocklevel',htmltutorialsblocklevel,name='htmltutorials-blocklevel'),
     path('htmltutorials/inline',htmltutorialsinline,name='htmltutorials-inline'),
     path('htmltutorials/forms',htmltutorialsforms,name='htmltutorials-forms'),
+    path('jstutorials/comments',jstutorialscomments,name="jstutorials-comments"),
+    path('jstutorials/arithmetic',jstutorialsarithmetic,name="jstutorials-arithmetic"),
+    path('jstutorials/functions',jstutorialsfunctions,name="jstutorials-functions"),
+    path('jstutorials/arrays',jstutorialsarrays,name="jstutorials-arrays"),
 ]
