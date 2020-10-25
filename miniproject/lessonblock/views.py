@@ -71,6 +71,8 @@ def jstutorialsfunctions(request):
     return render(request,"js_func.html")
 def jstutorialsarrays(request):
     return render(request,"js_arrays.html")
+def cssreferences(request):
+    return render(request,"css_references.html")
 
 
 
