@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block body %}
+{% include 'navbar.html' %}
+{% include 'htmlsidebar.html' %}
+<div class="main">
+    <h3><strong>HTML FORMS</strong></h3>
+    <p>An HTML form is used to collect user input.
+        The user input is most often sent to a server for processing.</p>
+    <p><pre><code>
+    <form action="#">
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="John"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Doe"><br><br>
+    <input type="submit" value="Submit">
+    </form>
+    </code></pre></p>
+    <br>
+    <h3><u>The &lt;form&gt; Element</u></h3>
+    <p>The HTML &lt;form&gt; element is used to create an HTML form for user input:</p>
+    <p><pre><code>
+    &lt;form&gt;
+    .
+    form elements
+    .
+    &lt;/form&gt;
+    </code></pre></p>
+    <p>The<span style="color:#b20000">&lt;form&gt;</span>  element is a container for different types of input elements,
+    such as: text fields, checkboxes, radio buttons, submit buttons, etc.</p>
+    <br>
+    <h3><u>The &lt;input&gt; Element</u></h3>
+    <p>The HTML &lt;input&gt; element is the most used form element.
+        An &lt;input&gt; element can be displayed in many ways,
+        depending on the type attribute.Here are some examples:</p>
+    <table width="100%" border="1">
+        <tr>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>&lt;input type="text"&gt;</td>
+            <td>Displays a single-line text input field</td>
+        </tr>
+        <tr>
+            <td>&lt;input type="radio"&gt;</td>
+            <td>Displays a radio button (for selecting one of many choices)</td>
+        </tr>
+        <tr>
+            <td>&lt;input type="checkbox"&gt;</td>
+            <td>Displays a checkbox (for selecting zero or more of many choices)</td>
+        </tr>
+        <tr>
+            <td>&lt;input type="submit"&gt;</td>
+            <td>Displays a submit button (for submitting the form)</td>
+        </tr>
+        <tr>
+            <td>&lt;input type="button"&gt;</td>
+            <td>Displays a clickable button</td>
+        </tr>
+    </table>
+    <br>
+    <h3><u>The &lt;label&gt; Element</u></h3>
+    <p>The <span style="color:#b20000">&lt;label&gt;</span> tag defines a label for many form elements.
+        The &lt;label&gt; element is useful for screen-reader users, because the screen-reader
+        will read out loud the label when the user focus on the input element.
+        The &lt;label&gt; element also help users who have difficulty clicking on very small regions (such as radio buttons or checkboxes) - because when the user clicks the text within the &lt;label&gt; element,
+            it toggles the radio button/checkbox. The for attribute of the &lt;label&gt; tag should be equal to the id attribute of the &lt;input&gt; element to bind them together.</p>
+<br><br><br>
+</div>
+{% endblock %}

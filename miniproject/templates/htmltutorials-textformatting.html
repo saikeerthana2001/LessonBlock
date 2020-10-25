@@ -1,19 +1,9 @@
 {% extends 'base.html' %}
 {% block body %}
 {% include 'navbar.html' %}
-<div class="sidenav">
-  <a href="{% url 'htmltutorials' %}">HTML overview</a>
-  <a href="{% url 'htmltutorials-basictags'%}">basic HTML tags</a>
-  <a href="{% url 'htmltutorials-textformatting'%}">text formatting tags</a>
-  <a href="{% url 'htmltutorials-citationtags' %}">citation tags</a>
-  <a>lists</a>
-  <a>Tables</a>
-  <a >HTML forms</a>
-  <a >Block level elements</a>
-  <a>Inline elements</a>
-</div>
+{% include 'htmlsidebar.html' %}
 <div class="main">
-    <h3>Text Formatting Tags</h3>
+    <h3><strong>Text Formatting Tags</strong></h3>
     <p>Formatting elements were designed to display special types of text:</p>
     <ul>
         <li>&lt;b&gt; - Bold text</li>

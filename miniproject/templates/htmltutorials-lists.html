@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% block body %}
+{% include 'navbar.html' %}
+{% include 'htmlsidebar.html' %}
+<div class="main">
+    <h3><strong>HTML LISTS</strong></h3>
+    <p>HTML  lists allow web developers to group a set of related items in lists.</p>
+    <h3><u>Unordered HTML list</u></h3>
+    <p>An unordered list starts with the &lt;ul&gt; tag. Each list item starts with the &lt;li&gt;
+        tag. The list items will be marked with bullets (small black circles) by default:</p>
+    <p><pre><code>
+    &lt;ul&gt;
+        &lt;li&gt;Coffee&lt;/li&gt;
+        &lt;li&gt;Tea&lt;/li&gt;
+        &lt;li&gt;Milk&lt;/li&gt;
+    &lt;/ul&gt;
+    </code></pre></p>
+    <br>
+    <h3><u>Ordered HTML list</u></h3>
+    <p>An ordered list starts with the &lt;ol&gt; tag.
+    Each list item starts with the &lt;li&gt; tag.
+    The list items will be marked with numbers by default:</p>
+    <p><pre><code>
+    &lt;ol&gt;
+        &lt;li&gt;Coffee&lt;/li&gt;
+        &lt;li&gt;Tea&lt;/li&gt;
+        &lt;li&gt;Milk&lt;/li&gt;
+    &lt;/ol&gt;
+    </code></pre></p>
+    <br>
+    <h3><u>HTML description list</u></h3>
+    <p>HTML also supports description lists. A description list
+        is a list of terms, with a description of each term.
+        The &lt;dl&gt; tag defines the description list, the &lt;dt&gt; tag
+        defines the term (name), and
+        the &lt;dd&gt; tag describes each term:</p>
+    <p><pre><code>
+    &lt;dl&gt;
+        &lt;dt&gt;Coffee&lt;/dt&gt;
+        &lt;dd&gt;-Black hot drink&lt;/dd&gt;
+        &lt;dt&gt;Milk&lt;/dt&gt;
+        &lt;dd&gt;-White cold drink&lt;/dd&gt;
+    &lt;/dl&gt;
+    </code></pre></p>
+    <br>
+    <h3><u>HTML list Tags</u></h3>
+    <table border="1" width="100%" >
+        <col style="width:15%">
+        <col style="width:70%">
+        <tr>
+            <th>Tag</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>&lt;ul&gt;</td>
+            <td>Defines an unordered list</td>
+        </tr>
+        <tr>
+            <td>&lt;ol&gt;</td>
+            <td>Defines an ordered list </td>
+        </tr>
+        <tr>
+            <td>&lt;li&gt;</td>
+            <td>Defines a list item</td>
+        </tr>
+        <tr>
+            <td>&lt;dl&gt;</td>
+            <td>Defines a description list</td>
+        </tr>
+        <tr>
+            <td>&lt;dt&gt;</td>
+            <td>Defines a term in a description list</td>
+        </tr>
+        <tr>
+            <td>&lt;dd&gt;</td>
+            <td>Describes the term in a description list</td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <br>
+</div>
+{% endblock %}

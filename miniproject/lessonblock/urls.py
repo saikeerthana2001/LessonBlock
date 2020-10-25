@@ -27,5 +27,9 @@ urlpatterns = [
     path('jstutorials/statements',jstutorialsstatements,name="jstutorials-statements"),
     path('jstutorials/syntax',jstutorialssyntax,name='jstutorials-syntax'),
     path('cssexamples/',cssexamples,name="cssexamples"),
-
+    path('htmltutorials/lists',htmltutorialslists,name='htmltutorials-lists'),
+    path('htmltutorials/tables',htmltutorialstables,name='htmltutorials-tables'),
+    path('htmltutorials/blocklevel',htmltutorialsblocklevel,name='htmltutorials-blocklevel'),
+    path('htmltutorials/inline',htmltutorialsinline,name='htmltutorials-inline'),
+    path('htmltutorials/forms',htmltutorialsforms,name='htmltutorials-forms'),
 ]

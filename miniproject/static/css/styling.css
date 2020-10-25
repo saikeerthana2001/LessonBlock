@@ -46,3 +46,13 @@ td,th{
     padding:20px;
 }
 
+.note{
+    background: #FFFFCC;
+}
+
+.box{
+    width:35%;
+    border: 3px solid #325C74;
+    padding: 10px;
+
+}

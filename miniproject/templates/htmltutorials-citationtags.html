@@ -1,19 +1,9 @@
 {% extends 'base.html' %}
 {% block body %}
 {% include 'navbar.html' %}
-<div class="sidenav">
-  <a href="{% url 'htmltutorials' %}">HTML overview</a>
-  <a href="{% url 'htmltutorials-basictags'%}">basic HTML tags</a>
-  <a href="{% url 'htmltutorials-textformatting'%}">text formatting tags</a>
-  <a href="{% url 'htmltutorials-citationtags' %}">citation tags</a>
-  <a>lists</a>
-  <a>Tables</a>
-  <a >HTML forms</a>
-  <a >Block level elements</a>
-  <a>Inline elements</a>
-</div>
+{% include 'htmlsidebar.html' %}
 <div class="main">
-    <h2>Citation Tags and Elements</h2>
+    <h3><strong>Citation Tags and Elements</strong></h3>
     <p>Citation elements include:</p>
     <ul>
         <li>&lt;abbr&gt; - Defines an abbreviation or acronym</li>

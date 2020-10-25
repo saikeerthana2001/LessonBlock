@@ -53,5 +53,18 @@ def jstutorialssyntax(request):
     return render(request, "js_syntax.html")
 def cssexamples(request):
     return render(request,"css_examples.html")
+def htmltutorialslists(request):
+    return render(request,"htmltutorials-lists.html")
+def htmltutorialstables(request):
+    return render(request,"htmltutorials-tables.html")
+def htmltutorialsblocklevel(request):
+    return render(request,"htmltutorials-blocklevel.html")
+def htmltutorialsinline(request):
+    return render(request,"htmltutorials-inline.html")
+def htmltutorialsforms(request):
+    return render(request,"htmltutorials-forms.html")
+
+
+
 
 

@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% block body %}
+{% include 'navbar.html' %}
+{% include 'htmlsidebar.html' %}
+<div class="main">
+    <h3><strong>HTML Block-level Elements</strong></h3>
+    <p>Every HTML element has a default display value, depending on what type of element it is.
+    There are two display values: block and inline.</p>
+    <h3><u>Block-level Elements</u></h3>
+    <p>A block-level element always starts on a new line and
+        takes up the full width available (stretches out to the left
+        and right as far as it can).</p>
+    <div class="box">
+        <p>The &lt;div&gt; element is a block-level element.</p>
+    </div>
+    <p><pre><code>
+    &lt;div&gt;Hello World&lt;/div&gt;
+    </code></pre></p>
+    <br>
+    <p>Here are the block-level elements in HTML:</p>
+        <table width="70%" >
+        <tr>
+            <td style="color:#b20000">&lt;address&gt;</td>
+            <td style="color:#b20000">&lt;article&gt;</td>
+            <td style="color:#b20000">&lt;aside&gt;</td>
+            <td style="color:#b20000">&lt;blockquote&gt;</td>
+            <td style="color:#b20000">&lt;canvas&gt;</td>
+        </tr>
+        <tr>
+            <td style="color:#b20000">&lt;dd&gt;</td>
+            <td style="color:#b20000">&lt;div&gt;</td>
+            <td style="color:#b20000">&lt;dl&gt;</td>
+            <td style="color:#b20000">&lt;dt&gt;</td>
+            <td style="color:#b20000">&lt;fieldset&gt;</td>
+        </tr>
+        <tr>
+            <td style="color:#b20000">&lt;figcaption&gt;</td>
+            <td style="color:#b20000">&lt;figure&gt;</td>
+            <td style="color:#b20000">&lt;footer&gt;</td>
+            <td style="color:#b20000">&lt;form&gt;</td>
+            <td style="color:#b20000">&lt;h1&gt;--&lt;h6&gt;</td>
+        </tr>
+        <tr>
+            <td style="color:#b20000">&lt;header&gt;</td>
+            <td style="color:#b20000">&lt;hr&gt;</td>
+            <td style="color:#b20000">&lt;li&gt;</td>
+            <td style="color:#b20000">&lt;main&gt;</td>
+            <td style="color:#b20000">&lt;nav&gt;</td>
+        </tr>
+        <tr>
+            <td style="color:#b20000">&lt;noscript&gt;</td>
+            <td style="color:#b20000">&lt;ol&gt;</td>
+            <td style="color:#b20000">&lt;p&gt;</td>
+            <td style="color:#b20000">&lt;pre&gt;</td>
+            <td style="color:#b20000">&lt;section&gt;</td>
+        </tr>
+        <tr>
+            <td style="color:#b20000">&lt;table&gt;</td>
+            <td style="color:#b20000">&lt;tfoot&gt;</td>
+            <td style="color:#b20000">&lt;ul&gt;</td>
+            <td style="color:#b20000">&lt;video&gt;</td>
+            <td></td>
+        </tr>
+    </table>
+    <br>
+    <h3><u>The &lt;div&gt; Element</u></h3>
+    <p>The &lt;div&gt; element is often used as a container for other HTML elements.
+        The &lt;div&gt; element has no required attributes, but style, class and id are common.
+        When used together with CSS, the &lt;div&gt; element can be used to style blocks of content:</p>
+    <p><pre><code>
+    &lt;div style="background-color:black;color:white;padding:20px;"&gt;
+    &lt;h2&gt;London&lt;/h2&gt;
+    &lt;p&gt;London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.&lt;/p&gt;
+    &lt;/div&gt;
+    </code></pre></p>
+
+
+    <br>
+    <br>
+    <br>
+</div>
+{% endblock %}

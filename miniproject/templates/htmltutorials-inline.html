@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% block body %}
+{% include 'navbar.html' %}
+{% include 'htmlsidebar.html' %}
+<div class="main">
+    <h3><strong>HTML Inline Elements</strong></h3>
+    <p>An inline element does not start on a new line and it only takes up as much width as necessary.</p>
+    <p>This is <span style="background:lightblue;">a &lt;span&gt; element inside</span> a paragraph</p>
+    <p><pre><code>
+    &lt;span&gt;Hello World&lt;/span&gt;
+    </code></pre></p>
+    <br>
+    <p>Here are the block-level elements in HTML:</p>
+        <table width="70%" >
+        <tr>
+            <td style="color:#b20000">&lt;a&gt;</td>
+            <td style="color:#b20000">&lt;abbr&gt;</td>
+            <td style="color:#b20000">&lt;acronym&gt;</td>
+            <td style="color:#b20000">&lt;b&gt;</td>
+            <td style="color:#b20000">&lt;bdo&gt;</td>
+        </tr>
+        <tr>
+            <td style="color:#b20000">&lt;big&gt;</td>
+            <td style="color:#b20000">&lt;br&gt;</td>
+            <td style="color:#b20000">&lt;button&gt;</td>
+            <td style="color:#b20000">&lt;cite&gt;</td>
+            <td style="color:#b20000">&lt;code&gt;</td>
+        </tr>
+        <tr>
+            <td style="color:#b20000">&lt;figcaption&gt;</td>
+            <td style="color:#b20000">&lt;figure&gt;</td>
+            <td style="color:#b20000">&lt;footer&gt;</td>
+            <td style="color:#b20000">&lt;form&gt;</td>
+            <td style="color:#b20000">&lt;h1&gt;--&lt;h6&gt;</td>
+        </tr>
+        <tr>
+            <td style="color:#b20000">&lt;dfn&gt;</td>
+            <td style="color:#b20000">&lt;em&gt;</td>
+            <td style="color:#b20000">&lt;i&gt;</td>
+            <td style="color:#b20000">&lt;img&gt;</td>
+            <td style="color:#b20000">&lt;input&gt;</td>
+        </tr>
+        <tr>
+            <td style="color:#b20000">&lt;kbd&gt;</td>
+            <td style="color:#b20000">&lt;label&gt;</td>
+            <td style="color:#b20000">&lt;map&gt;</td>
+            <td style="color:#b20000">&lt;object&gt;</td>
+            <td style="color:#b20000">&lt;output&gt;</td>
+        </tr>
+        <tr>
+            <td style="color:#b20000">&lt;q&gt;</td>
+            <td style="color:#b20000">&lt;samp&gt;</td>
+            <td style="color:#b20000">&lt;script&gt;</td>
+            <td style="color:#b20000">&lt;select&gt;</td>
+            <td style="color:#b20000">&lt;small&gt;</td>
+        </tr>
+        <tr>
+            <td style="color:#b20000">&lt;span&gt;</td>
+            <td style="color:#b20000">&lt;strong&gt;</td>
+            <td style="color:#b20000">&lt;sub&gt;</td>
+            <td style="color:#b20000">&lt;sup&gt;</td>
+            <td style="color:#b20000">&lt;textarea&gt;</td>
+        </tr>
+        <tr>
+            <td style="color:#b20000">&lt;time&gt;</td>
+            <td style="color:#b20000">&lt;tt&gt;</td>
+            <td style="color:#b20000">&lt;var&gt;</td>
+        </tr>
+    </table>
+    <br>
+    <span class="note"><b>Note:</b>An inline element cannot contain a block-level element!</span>
+    <br>
+    <h3><u>The &lt;span&gt; Element</u></h3>
+    <p>The &lt;span&gt; element is an inline container used to mark up a part of a text, or a part of a document.
+        The &lt;span&gt; element has no required attributes, but style, class and id are common.
+            When used together with CSS, the &lt;span&gt; element can be used to style parts of the text:</p>
+    <p><pre><code>
+    &lt;p&gt;My mother has &lt;span style="color:blue;font-weight:bold"&gt;blue&lt;/span&gt; eyes and my father has
+    &lt;span style="color:darkolivegreen;font-weight:bold"&gt;dark green&lt;/span&gt; eyes.&lt;/p&gt;
+    </code></pre></p>
+    <br>
+    <h3><u>Chapter Summary</u></h3>
+    <ul>
+        <li>There are two display values:<span style="color:red;">block and inline</span></li>
+        <li>A block-level element always starts on a new line and takes up the full width available</li>
+        <li>An inline element does not start on a new line and it only takes up as much width as necessary</li>
+        <li>The<span style="color:red;">&lt;div&gt;</span>  element is a block-level and is often used as a container for other HTML elements</li>
+        <li>The<span style="color:red;">&lt;span&gt;</span>  element is an inline container used to mark up a part of a text, or a part of a document</li>
+    </ul>
+
+    <br>
+    <br>
+    <br>
+</div>
+{% endblock %}
