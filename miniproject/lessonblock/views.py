@@ -73,6 +73,10 @@ def jstutorialsarrays(request):
     return render(request,"js_arrays.html")
 def cssreferences(request):
     return render(request,"css_references.html")
+def htmlexamples(request):
+    return render(request,"htmlexamples.html")
+def htmlreferencesss(request):
+    return render(request,"htmlreferences.html")
 
 
 

@@ -37,5 +37,7 @@ urlpatterns = [
     path('jstutorials/functions',jstutorialsfunctions,name="jstutorials-functions"),
     path('jstutorials/arrays',jstutorialsarrays,name="jstutorials-arrays"),
     path('cssreferences/',cssreferences,name="cssreferences"),
+    path('htmlexamples/',htmlexamples,name="htmlexamples"),
+    path('htmlreferences/',htmlreferencesss,name="htmlreferences"),
 
 ]
