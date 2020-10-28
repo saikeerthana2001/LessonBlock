@@ -15,11 +15,11 @@
     <a href="{% url 'csstutorials-animations' %}">CSS Animations</a>
 </div>
 <div class="main">
-    <h3>CSS Layout - The position Property</h3><br>
+    <h3><strong>CSS Layout - The position Property</strong></h3><br>
     <p>
         The position property specifies the type of positioning method used for an element (static, relative, fixed, absolute or sticky).
     </p>
-    <h3>The position Property</h3><br>
+    <h3><strong>The position Property</strong></h3><br>
     <p>
         The position property specifies the type of positioning method used for an element.<br>
         There are five different position values:<br>
@@ -32,7 +32,7 @@
 </ul>
     <br>Elements are then positioned using the top, bottom, left, and right properties. However, these properties will not work unless the position property is set first. They also work differently depending on the position value.
     </p>
-    <h3>position: static;</h3><br>
+    <h3><strong>position: static;</strong></h3>
     <p>
         HTML elements are positioned static by default.<br>
         Static positioned elements are not affected by the top, bottom, left, and right properties.<br>
@@ -40,99 +40,91 @@
         This &lt;div&gt; element has position: static;<br>
         Here is the CSS that is used:<br>
     </p>
-    <code><pre>
-        div.static{<br>
-        &nbsp;&nbsp;position: static;<br>
-        &nbsp;&nbsp;border: 3px solid #73AD21;<br>
-        }<br>
-    </pre></code>
-    <h3>position: relative;</h3><br>
+<pre><code>div.static{
+position: static;
+border: 3px solid #73AD21;
+}
+</code></pre><br>
+    <h3><strong>position: relative;</strong></h3>
     <p>
         An element with position: relative; is positioned relative to its normal position.<br>
         Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.<br>
         This &lt;div&gt; element has position: relative;<br>
         Here is the CSS that is used:<br>
     </p>
-    <code><pre>
-        div.relative{<br>
-        &nbsp;&nbsp;position: relative;<br>
-        &nbsp;&nbsp;left: 30px;<br>
-        &nbsp;&nbsp;border: 3px solid #73AD21;<br>
-        }
-    </pre></code>
-    <h3>position: fixed;</h3><br>
+<pre><code>div.relative{
+position: relative;
+left: 30px;
+border: 3px solid #73AD21;
+}
+</code></pre><br>
+    <h3><strong>position: fixed;</strong></h3>
     <p>
         An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element.<br>
         A fixed element does not leave a gap in the page where it would normally have been located.<br>
          Here is the CSS that is used:<br>
     </p>
-    <code><pre>
-        div.fixed{<br>
-        &nbsp;&nbsp;position: fixed;<br>
-        &nbsp;&nbsp;bottom: 0;<br>
-        &nbsp;&nbsp;right: 0;<br>
-        &nbsp;&nbsp;width: 300px;<br>
-        &nbsp;&nbsp;border: 3px solid #73AD21;<br>
-        }
-    </pre></code>
-    <h3>position: absolute;</h3><br>
+<pre><code>div.fixed{
+position: fixed;
+bottom: 0;
+right: 0;
+width: 300px;
+border: 3px solid #73AD21;
+}
+</code></pre><br>
+    <h3><strong>position: absolute;</strong></h3>
     <p>
         An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed).<br>
         However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling.<br>
         <strong>Note:</strong> A "positioned" element is one whose position is anything except static.<br>
         Here is the CSS that is used:<br>
     </p>
-    <code><pre>
-        div.relative {<br>
-        &nbsp;&nbsp;position: relative;<br>
-        &nbsp;&nbsp;width: 400px;<br>
-        &nbsp;&nbsp;height: 200px;<br>
-        &nbsp;&nbsp;border: 3px solid #73AD21;<br>
-        }<br>
-        div.absolute {<br>
-        &nbsp;&nbsp;position: absolute;<br>
-        &nbsp;&nbsp;top: 80px;<br>
-        &nbsp;&nbsp;right: 0;<br>
-        &nbsp;&nbsp;width: 200px;<br>
-        &nbsp;&nbsp;height: 100px;<br>
-        &nbsp;&nbsp;border: 3px solid #73AD21;<br>
-        }
-    </pre></code>
-    <h3>position: sticky;</h3>
-    <br>
+<pre><code>div.relative {
+position: relative;
+width: 400px;
+height: 200px;
+border: 3px solid #73AD21;
+}
+div.absolute {
+position: absolute;
+top: 80px;
+right: 0;
+width: 200px;
+height: 100px;
+border: 3px solid #73AD21;
+}
+</code></pre><br>
+    <h3><strong>position: sticky;</strong></h3>
     <p>
         An element with position: sticky; is positioned based on the user's scroll position.<br>
         A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).<br>
         Here is the CSS that is used:<br>
     </p>
-    <code><pre>
-        div.sticky {<br>
-        &nbsp;&nbsp;position: -webkit-sticky; /* Safari */<br>
-        &nbsp;&nbsp;position: sticky;<br>
-        &nbsp;&nbsp;top: 0;<br>
-        &nbsp;&nbsp;background-color: green;<br>
-        &nbsp;&nbsp;border: 2px solid #4CAF50;<br>
-        }<br>
-    </pre></code>
-    <h3>Overlapping Elements</h3>
-    <br>
+<pre><code>div.sticky {
+position: -webkit-sticky; /* Safari */
+position: sticky;
+top: 0;
+background-color: green;
+border: 2px solid #4CAF50;
+}
+</code></pre><br>
+    <h3><strong>Overlapping Elements</strong></h3>
     <p>
      When elements are positioned, they can overlap other elements.<br>
        The z-index property specifies the stack order of an element (which element should be placed in front of, or behind, the others).<br>
         An element can have a positive or negative stack order<br>
     </p>
-    <code><pre>
-        img {<br>
-        &nbsp;&nbsp;position: absolute;<br>
-        &nbsp;&nbsp;left: 0px;<br>
-        &nbsp;&nbsp;top: 0px;<br>
-        &nbsp;&nbsp;z-index: -1;<br>
-        }<br>
-    </pre></code>
+<pre><code>img {
+position: absolute;
+left: 0px;
+top: 0px;
+z-index: -1;
+}
+</code></pre><br>
     <p>
-        An element with greater stack order is always in front of an element with a lower stack order.<br>
-        <strong>Note:</strong>If two positioned elements overlap without a z-index specified, the element positioned last in the HTML code will be shown on top.<br>
+        An element with greater stack order is always in front of an element with a lower stack order.<br><br>
+        <span class="note"><strong>Note:</strong>If two positioned elements overlap without a z-index specified, the element positioned last in the HTML code will be shown on top.</span><br>
     </p>
-
+<br><br>
 </div>
 {% endblock %}

@@ -14,8 +14,8 @@
     <a href="{% url 'csstutorials-animations' %}">CSS Animations</a>
 </div>
 <div class="main">
-    <h3>CSS Pseudo-elements</h3>
-    <br><h3>What are Pseudo-Elements?</h3><br>
+    <h3><strong>CSS Pseudo-elements</strong></h3>
+    <h3><strong>What are Pseudo-Elements?</strong></h3>
     <p>
         A CSS pseudo-element is used to style specified parts of an element.<br>
         For example, it can be used to:<br>
@@ -24,28 +24,26 @@
     <li>Insert content before, or after, the content of an element</li>
 </ul>
     </p>
-    <h3>Syntax</h3><br>
+    <h3><strong>Syntax</strong></h3>
     <p>
         The syntax of pseudo-elements:<br>
     </p>
-    <code><pre>
-        selector::pseudo-element {<br>
-        &nbsp;&nbsp;property: value;<br>
-        }<br>
-    </pre></code>
-    <h3>The ::first-line Pseudo-element</h3><br>
+<pre><code>selector::pseudo-element {
+property: value;
+}
+</code></pre><br>
+    <h3><strong>The ::first-line Pseudo-element</strong></h3>
     <p>
         The ::first-line pseudo-element is used to add a special style to the first line of a text.<br>
         The following example formats the first line of the text in all &lt;p&gt; elements:<br>
     </p>
-    <code><pre>
-        p::first-line {<br>
-        &nbsp;&nbsp;color: #ff0000;<br>
-        &nbsp;&nbsp;font-variant: small-caps;<br>
-        }<br>
-    </pre></code>
-    <strong>Note:</strong>The ::first-line pseudo-element can only be applied to block-level elements.<br>
-    <p>
+<pre><code>p::first-line {
+color: #ff0000;
+font-variant: small-caps;
+}
+</code></pre><br>
+    <span class="note"><strong>Note:</strong>The ::first-line pseudo-element can only be applied to block-level elements.</span><br>
+    <br><p>
         The following properties apply to the ::first-line pseudo-element:<br>
         <ul>
     <li>font properties</li>
@@ -59,19 +57,18 @@
     <li>line-height</li>
     <li>clear</li>
 </ul>
-    </p>
-    <h3>The ::first-letter Pseudo-element</h3>
+    </p><br>
+    <h3><strong>The ::first-letter Pseudo-element</strong></h3>
     <p>
       The ::first-letter pseudo-element is used to add a special style to the first letter of a text.<br>
         The following example formats the first letter of the text in all &lt;p&gt; elements: <br>
     </p>
-    <code><pre>
-        p::first-letter {<br>
-        &nbsp;&nbsp;color: #ff0000;<br>
-        &nbsp;&nbsp;font-size: xx-large;<br>
-        }<br>
-    </pre></code>
-    <p><strong>Note:</strong>The ::first-letter pseudo-element can only be applied to block-level elements.<br>
+<pre><code>p::first-letter {
+color: #ff0000;
+font-size: xx-large;
+}
+</code></pre>
+    <p><span class="note"><strong>Note:</strong>The ::first-letter pseudo-element can only be applied to block-level elements.</span><br><br>
     The following properties apply to the ::first-letter pseudo- element: <br>
         <ul>
     <li>font properties</li>
@@ -87,66 +84,61 @@
     <li>float</li>
     <li>clear</li>
 </ul>
-    </p>
-    <h3>Pseudo-elements and CSS Classes</h3><br>
+    </p><br>
+    <h3><strong>Pseudo-elements and CSS Classes</strong></h3>
     <p>Pseudo-elements can be combined with CSS classes: </p>
-    <code><pre>
-        p.intro::first-letter {<br>
-        &nbsp;&nbsp;color: #ff0000;<br>
-        &nbsp;&nbsp;font-size: 200%;<br>
-        }<br>
-    </pre></code>
-    The example above will display the first letter of paragraphs with class="intro", in red and in a larger size.<br>
-    <h3>Multiple Pseudo-elements</h3><br>
+<pre><code>p.intro::first-letter {
+color: #ff0000;
+font-size: 200%;
+}
+</code></pre>
+    The example above will display the first letter of paragraphs with class="intro", in red and in a larger size.<br><br>
+    <h3><strong>Multiple Pseudo-elements</strong></h3>
     <p>
         Several pseudo-elements can also be combined.<br>
         In the following example, the first letter of a paragraph will be red, in an xx-large font size. The rest of the first line will be blue, and in small-caps. The rest of the paragraph will be the default font size and color:<br>
     </p>
-    <code><pre>
-        p::first-letter {<br>
-  &nbsp;&nbsp;color: #ff0000;<br>
-  &nbsp;&nbsp;font-size: xx-large;<br>
-}<br>
-        p::first-line {<br>
-  &nbsp;&nbsp;color: #0000ff;<br>
-  &nbsp;&nbsp;font-variant: small-caps;<br>
-}<br>
-    </pre></code>
-    <h3>CSS - The ::before Pseudo-element</h3><br>
+<pre><code>p::first-letter {
+color: #ff0000;
+font-size: xx-large;
+}
+p::first-line {
+color: #0000ff;
+font-variant: small-caps;
+}
+</code></pre><br>
+    <h3><strong>CSS - The ::before Pseudo-element</strong></h3><br>
     <p>
         The ::before pseudo-element can be used to insert some content before the content of an element.<br>
         The following example inserts an image before the content of each &lt;h1&gt; element:<br>
     </p>
-    <code><pre>
-        h1::before {<br>
-  &nbsp;&nbsp;content: url(smiley.gif);<br>
-}<br>
-    </pre></code>
-    <h3>CSS - The ::after Pseudo-element</h3><br>
+<pre><code>h1::before {
+content: url(smiley.gif);
+}
+</code></pre><br>
+    <h3><strong>CSS - The ::after Pseudo-element</strong></h3>
     <p>
         The ::after pseudo-element can be used to insert some content after the content of an element.<br>
         The following example inserts an image after the content of each &lt;h1&gt; element:<br>
     </p>
-    <code><pre>
-        h1::after {<br>
-  &nbsp;&nbsp;content: url(smiley.gif);<br>
-}<br>
-    </pre></code>
-    <h3>CSS - The ::selection Pseudo-element</h3><br>
+<pre><code>h1::after {
+content: url(smiley.gif);
+}
+</code></pre><br>
+    <h3><strong>CSS - The ::selection Pseudo-element</strong></h3>
     <p>
         The ::selection pseudo-element matches the portion of an element that is selected by a user.<br>
         The following CSS properties can be applied to ::selection: color, background, cursor, and outline.<br>
         The following example makes the selected text red on a yellow background:<br>
     </p>
-    <code><pre>
-        ::selection {<br>
-  &nbsp;&nbsp;color: red;<br>
-  &nbsp;&nbsp;background: yellow;<br>
-}<br>
-    </pre></code>
+<pre><code>::selection {
+color: red;
+background: yellow;
+}
+</code></pre>
     <br>
-<h3>All CSS Pseudo Elements</h3>
-<table>
+    <h3><strong>All CSS Pseudo Elements</strong></h3>
+<table border="1">
   <tr>
     <th style="width:20%">Selector</th>
     <th style="width:20%">Example</th>
@@ -179,8 +171,8 @@
   </tr>
 </table>
 <br>
-<h3>All CSS Pseudo Classes</h3>
-<table>
+    <h3><strong>All CSS Pseudo Classes</strong></h3>
+<table border="1">
   <tr>
     <th style="width:20%">Selector</th>
     <th style="width:20%">Example</th>
@@ -342,5 +334,6 @@
     <td>Selects all visited links</td>
   </tr>
 </table>
+    <br><br>
 </div>
 {% endblock %}

@@ -1,8 +1,48 @@
 {% extends 'base.html' %}
 {% block body %}
 {% include 'navbar.html' %}
-<h2>A</h2>
-<table>
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i,alltables;
+    alltables = document.querySelectorAll("table[data-name=mytable]");
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  alltables.forEach(function(table){
+      tr = table.getElementsByTagName("tr");
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+  });
+}
+</script>
+<style>
+  #myInput {
+  background-image: url('https://img.icons8.com/search');
+  background-position: 5px 5px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 70%; /* Full-width */
+  font-size: 25px; /* Increase font-size */
+  padding: 12px 20px 12px 60px; /* Add some padding */
+  border: 1px solid #A9A9A9; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+  margin-left:15%;
+  margin-right:15%;
+}
+</style>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for tags....">
+<center>
+<table width="70%" border="1" data-name="mytable">
+  <tr>
+    <td colspan="2"> <h2>A</h2></td>
+  </tr>
   <tr>
     <td>align-content</td>
     <td>Specifies the alignment between the lines inside a flexible container when the items do not use all available space</td>
@@ -57,10 +97,9 @@
     <td>animation-timing-function</td>
     <td>Specifies the speed curve of an animation</td>
   </tr>
-</table>
-
-<h2>B</h2>
-<table>
+  <tr>
+    <td colspan="2"><h2>B</h2></td>
+  </tr>
   <tr>
     <td>backface-visibility</td>
     <td>Defines whether or not the back face of an element should be visible when facing the user</td>
@@ -272,10 +311,9 @@
     <td>Specifies whether or not a page-, column-, or region-break should occur
     inside the specified element</td>
   </tr>
-</table>
-
-<h2>C</h2>
-<table>
+  <tr>
+    <td colspan="2"><h2>C</h2></td>
+  </tr>
   <tr>
     <td>caption-side</td>
     <td>Specifies the placement of a table caption</td>
@@ -357,10 +395,9 @@
     <td>cursor</td>
     <td>Specifies the mouse cursor to be displayed when pointing over an element</td>
   </tr>
-</table>
-
-<h2>D</h2>
-<table>
+  <tr>
+    <td colspan="2"><h2>D</h2></td>
+  </tr>
   <tr>
     <td>direction</td>
     <td>Specifies the text direction/writing direction</td>
@@ -369,18 +406,16 @@
     <td>display</td>
     <td>Specifies how a certain HTML element should be displayed</td>
   </tr>
-</table>
-
-<h2>E</h2>
-<table>
+  <tr>
+    <td colspan="2"><h2>E</h2></td>
+  </tr>
   <tr>
     <td width="20%">empty-cells</td>
     <td>Specifies whether or not to display borders and background on empty cells in a table</td>
   </tr>
-</table>
-
-<h2>F</h2>
-<table>
+  <tr>
+    <td colspan="2"><h2>F</h2></td>
+  </tr>
   <tr>
     <td width="20%">filter</td>
     <td>Defines effects (e.g. blurring or color shifting) on an element before the element is displayed</td>
@@ -500,10 +535,9 @@
     <td>font-weight</td>
     <td>Specifies the weight of a font</td>
   </tr>
-</table>
-
-<h2>G</h2>
-<table>
+  <tr>
+    <td colspan="2"><h2>G</h2></td>
+  </tr>
   <tr>
     <td width="20%">grid</td>
     <td>A shorthand property for the <em>grid-template-rows,
@@ -579,10 +613,9 @@
     <td>grid-template-rows</td>
     <td>Specifies the size of the rows in a grid layout</td>
   </tr>
-</table>
-
-<h2>H</h2>
-<table>
+  <tr>
+    <td colspan="2"><h2>H</h2></td>
+  </tr>
   <tr>
     <td width="20%">hanging-punctuation</td>
     <td>Specifies whether a punctuation character may be placed outside the line box</td>
@@ -595,10 +628,9 @@
     <td>hyphens</td>
     <td>Sets how to split words to improve the layout of paragraphs</td>
   </tr>
-</table>
-
-<h2>I</h2>
-<table>
+  <tr>
+    <td colspan="2"><h2>I</h2></td>
+  </tr>
   <tr>
     <td>image-rendering</td>
     <td>Gives a hint to the browser about what aspects of an image are most important to preserve when the image is scaled</td>
@@ -611,26 +643,23 @@
     <td>isolation</td>
     <td>Defines whether an element must create a new stacking content</td>
   </tr>
-</table>
-
-<h2>J</h2>
-<table>
+  <tr>
+    <td colspan="2"><h2>J</h2></td>
+  </tr>
   <tr>
     <td width="20%">justify-content</td>
     <td>Specifies the alignment between the items inside a flexible container when the items do not use all available space</td>
   </tr>
-</table>
-
-<h2>K</h2>
-<table>
+  <tr>
+    <td colspan="2"><h2>J</h2></td>
+  </tr>
   <tr>
     <td width="20%">@keyframes</td>
     <td>Specifies the animation code</td>
   </tr>
-</table>
-
-<h2>L</h2>
-<table>
+  <tr>
+    <td colspan="2"><h2>L</h2></td>
+  </tr>
   <tr>
     <td width="20%">left</td>
     <td>Specifies the left position of a positioned element</td>
@@ -663,10 +692,9 @@
     <td>list-style-type</td>
     <td>Specifies the type of list-item marker</td>
   </tr>
-</table>
-
-<h2>M</h2>
-<table>
+  <tr>
+    <td colspan="2"><h2>M</h2></td>
+  </tr>
   <tr>
     <td width="20%">margin</td>
     <td>Sets all the margin properties in one declaration</td>
@@ -719,10 +747,9 @@
     <td>mix-blend-mode</td>
     <td>Specifies how an element's content should blend with its direct parent background</td>
   </tr>
-</table>
-
-<h2>O</h2>
-<table>
+  <tr>
+    <td colspan="2"><h2>O</h2></td>
+  </tr>
   <tr>
     <td width="20%">object-fit</td>
     <td>Specifies how the contents of a replaced element should be fitted to the box established by its used height and width</td>
@@ -781,10 +808,9 @@
     <td>overflow-y</td>
     <td>Specifies whether or not to clip the top/bottom edges of the content, if it overflows the element's content area</td>
   </tr>
-</table>
-
-<h2>P</h2>
-<table>
+  <tr>
+    <td colspan="2"><h2>P</h2></td>
+  </tr>
   <tr>
     <td width="20%">padding</td>
     <td>A shorthand property for all the <em>padding-*</em> properties</td>
@@ -833,18 +859,16 @@
     <td>position</td>
     <td>Specifies the type of positioning method used for an element (static, relative, absolute or fixed)</td>
   </tr>
-</table>
-
-<h2>Q</h2>
-<table>
+  <tr>
+    <td colspan="2"><h2>Q</h2></td>
+  </tr>
   <tr>
     <td>quotes</td>
     <td>Sets the type of quotation marks for embedded quotations</td>
   </tr>
-</table>
-
-<h2>R</h2>
-<table>
+  <tr>
+    <td colspan="2"><h2>R</h2></td>
+  </tr>
   <tr>
     <td>resize</td>
     <td>Defines if (and how) an element is resizable by the user</td>
@@ -853,18 +877,16 @@
     <td>right</td>
     <td>Specifies the right position of a positioned element</td>
   </tr>
-</table>
-
-<h2>S</h2>
-<table>
+  <tr>
+    <td colspan="2"><h2>S</h2></td>
+  </tr>
   <tr>
     <td>scroll-behavior</td>
     <td>Specifies whether to smoothly animate the scroll position in a scrollable box, instead of a straight jump</td>
   </tr>
-</table>
-
-<h2>T</h2>
-<table>
+  <tr>
+    <td colspan="2"><h2>T</h2></td>
+  </tr>
   <tr>
     <td>tab-size</td>
     <td>Specifies the width of a tab character</td>
@@ -965,10 +987,9 @@
     <td>transition-timing-function</td>
     <td>Specifies the speed curve of the transition effect</td>
   </tr>
-</table>
-
-<h2>U</h2>
-<table>
+  <tr>
+    <td colspan="2"><h2>U</h2></td>
+  </tr>
   <tr>
     <td>unicode-bidi</td>
     <td>Used together with the direction property to set or return whether the text should be overridden to support multiple languages in the same document</td>
@@ -977,10 +998,9 @@
     <td>user-select</td>
     <td>Specifies whether the text of an element can be selected</td>
   </tr>
-</table>
-
-<h2>V</h2>
-<table>
+  <tr>
+    <td colspan="2"><h2>V</h2></td>
+  </tr>
   <tr>
     <td width="20%">vertical-align</td>
     <td>Sets the vertical alignment of an element</td>
@@ -989,10 +1009,9 @@
     <td>visibility</td>
     <td>Specifies whether or not an element is visible</td>
   </tr>
-</table>
-
-<h2>W</h2>
-<table>
+  <tr>
+    <td colspan="2"><h2>W</h2></td>
+  </tr>
   <tr>
     <td>white-space</td>
     <td>Specifies how white-space inside an element is handled</td>
@@ -1021,15 +1040,18 @@
     <td>writing-mode</td>
     <td>Specifies whether lines of text are laid out horizontally or vertically</td>
   </tr>
-</table>
-
-<h2>Z</h2>
-<table>
+  <tr>
+    <td colspan="2"><h2>Z</h2></td>
+  </tr>
   <tr>
     <td>z-index</td>
     <td>Sets the stack order of a positioned element</td>
   </tr>
 </table>
-</div>
+</center>
+<br>
+<hr>
+<br>
+<hr>
 {% endblock %}
 
