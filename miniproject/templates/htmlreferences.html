@@ -2,10 +2,47 @@
 {% block body %}
 {% include 'navbar.html' %}
 
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i,alltables;
+    alltables = document.querySelectorAll("table[data-name=mytable]");
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  alltables.forEach(function(table){
+      tr = table.getElementsByTagName("tr");
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+  });
+}
+</script>
+<style>
+  #myInput {
+  background-image: url('https://img.icons8.com/search');
+  background-position: 5px 5px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 70%; /* Full-width */
+  font-size: 25px; /* Increase font-size */
+  padding: 12px 20px 12px 60px; /* Add some padding */
+  border: 1px solid #A9A9A9; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+  margin-left:15%;
+  margin-right:15%;
+}
+</style>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for tags....">
+
 <h2 style="margin-left:15%">Basic HTML</h2>
   <br>
 <center>
-<table width="70%" border="1">
+<table width="70%" border="1" data-name="mytable">
 <tr>
 <th style="width:20%">Tag</th>
 <th>Description</th>
@@ -59,7 +96,7 @@
 <h2 style="margin-left:15%">Formatting</h2>
 <br>
 <center>
-<table border="1" width="70%">
+<table border="1" width="70%" data-name="mytable">
 <tr>
 <th style="width:20%">Tag</th>
 <th>Description</th>
@@ -232,7 +269,7 @@ text</td>
 <h2 style="margin-left:15%">Forms and Input</h2>
 <br>
 <center>
-<table border="1" width="70%">
+<table border="1" width="70%" data-name="mytable">
 <tr>
 <th style="width:20%">Tag</th>
 <th>Description</th>
@@ -294,7 +331,7 @@ text</td>
 <h2 style="margin-left:15%;">Frames</h2>
 <br>
 <center>
-<table border="1" width="70%">
+<table border="1" width="70%" data-name="mytable">
 <tr>
 <th style="width:20%">Tag</th>
 <th>Description</th>
@@ -325,7 +362,7 @@ frames</td>
 <h2 style="margin-left:15%">Images</h2>
 <br>
 <center>
-<table border="1" width="70%">
+<table border="1" width="70%" data-name="mytable">
 <tr>
 <th style="width:20%">Tag</th>
 <th>Description</th>
@@ -371,7 +408,7 @@ frames</td>
 <h2 style="margin-left:15%">Audio / Video</h2>
 <br>
 <center>
-<table border="1" width="70%">
+<table border="1" width="70%" data-name="mytable">
 <tr>
 <th style="width:20%">Tag</th>
 <th>Description</th>
@@ -403,7 +440,7 @@ and &lt;picture&gt;)</td>
 <h2 style="margin-left:15%">Links</h2>
 <br>
 <center>
-<table border="1" width="70%">
+<table border="1" width="70%" data-name="mytable">
 <tr>
 <th style="width:20%">Tag</th>
 <th>Description</th>
@@ -430,7 +467,7 @@ used to link to style sheets)</td>
 <h2 style="margin-left:15%">Lists</h2>
 <br>
 <center>
-<table border="1" width="70%">
+<table border="1" width="70%" data-name="mytable">
 <tr>
 <th style="width:20%">Tag</th>
 <th>Description</th>
@@ -473,7 +510,7 @@ used to link to style sheets)</td>
 <h2 style="margin-left:15%">Tables</h2>
 <br>
 <center>
-<table border="1" width="70%">
+<table border="1" width="70%" data-name="mytable">
 <tr>
 <th style="width:20%">Tag</th>
 <th>Description</th>
@@ -527,7 +564,7 @@ used to link to style sheets)</td>
 <h2 style="margin-left:15%">Styles and Semantics</h2>
 <br>
 <center>
-<table border="1" width="70%">
+<table border="1" width="70%" data-name="mytable">
 <tr>
 <th style="width:20%">Tag</th>
 <th>Description</th>
@@ -594,7 +631,7 @@ translation of a given content</td>
 <h2 style="margin-left:15%">Meta Info</h2>
 <br>
 <center>
-<table border="1" width="70%">
+<table border="1" width="70%" data-name="mytable">
 <tr>
 <th style="width:20%">Tag</th>
 <th>Description</th>
@@ -624,7 +661,7 @@ translation of a given content</td>
 <h2 style="margin-left:15%">Programming</h2>
 <br>
 <center>
-<table border="1" width="70%">
+<table border="1" width="70%" data-name="mytable">
 <tr>
 <th style="width:20%">Tag</th>
 <th>Description</th>
