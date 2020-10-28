@@ -2,7 +2,7 @@
 {% block body %}
 {% include 'navbar.html' %}
 {% include 'htmlsidebar.html' %}
-<div class="main">
+<div class="main" style="font-size:17px">
     <h3><strong>HTML TABLES</strong></h3>
     <p>HTML tables allow web developers to arrange data into rows and columns.</p>
     <h3><u>Define an HTML Table</u></h3>
@@ -11,41 +11,36 @@
     Each table data/cell is defined with a &lt;td&gt; tag.
     By default, the text in &lt;th&gt; elements are bold and centered.
     By default, the text in &lt;td&gt; elements are regular and left-aligned.</p>
-    <p><pre><code>
-    &lt;table style="width:100%"&gt;
-    &lt;tr&gt;
-        &lt;th&gt;Firstname&lt;/th&gt;
-        &lt;th&gt;Lastname&lt;/th&gt;
-        &lt;th&gt;Age&lt;/th&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;Jill&lt;/td&gt;
-        &Lt;td&gt;Smith&lt;/td&gt;
-        &lt;td&gt;50&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;/table&gt;
-    </code></pre></p>
+    <p><pre><code>&lt;table style="width:100%"&gt;
+&lt;tr&gt;
+&lt;th&gt;Firstname&lt;/th&gt;
+&lt;th&gt;Lastname&lt;/th&gt;
+&lt;th&gt;Age&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Jill&lt;/td&gt;
+&lt;td&gt;Smith&lt;/td&gt;
+&lt;td&gt;50&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;</code></pre></p>
     <br>
     <p class="note"><b>Note:</b>The &lt;td&gt; elements are the data containers of the table.
         They can contain all sorts of HTML elements;
         text, images, lists, other tables, etc.</p>
     <h3><u>HTML Table- Cell that Span Many Rows </u></h3>
-    <p><pre><code>
-        &lt;table style="width:100%"&gt;
-        &lt;tr&gt;
-            &lt;th&gt;Name:&lt;/th&gt;
-            &lt;th&gt;Bill Gates&lt;/th&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;th rowspan="2"&gt;Telephone:&lt;/td&gt;
-            &Lt;td&gt;45878735&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &Lt;td&gt;55566383&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;/table&gt;
-    </code>
-    </pre>
+    <p><pre><code>&lt;table style="width:100%"&gt;
+&lt;tr&gt;
+&lt;th&gt;Name:&lt;/th&gt;
+&lt;th&gt;Bill Gates&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th rowspan="2"&gt;Telephone:&lt;/td&gt;
+&lt;td&gt;45878735&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;55566383&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;</code> </pre>
     </p>
     <br>
     <span class="note"><b>Note:</b>The &lt;caption&gt; tag can be used to add caption and must be inserted

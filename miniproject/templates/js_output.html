@@ -11,8 +11,8 @@
     <a href="{% url 'jstutorials-functions' %}">JS Functions</a>
     <a href="{% url 'jstutorials-arrays' %}">JS Arrays</a>
 </div>
-<div class="main">
-    <h3>JavaScript Display Possibilities</h3><br>
+<div class="main" style="font-size:17px">
+    <h3><strong>JavaScript Display Possibilities</strong></h3><br>
     <p>JavaScript can "display" data in different ways:<br>
     <ul>
     <li>Writing into an HTML element, using innerHTML.</li>
@@ -20,96 +20,86 @@
     <li>Writing into an alert box, using window.alert().</li>
     <li>Writing into the browser console, using console.log().</li>
 </ul></p>
-    <h3>Using innerHTML</h3><br>
+    <h3><strong>Using innerHTML</strong></h3><br>
     <p>To access an HTML element, JavaScript can use the document.getElementById(id) method.<br>
     The id attribute defines the HTML element. The innerHTML property defines the HTML content:<br>
     </p>
-    <code><pre>
-         &lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>
-&lt;body&gt;<br>
-<br>
-&lt;h1&gt;My First Web Page&lt;/h1&gt;<br>
- &lt;p&gt;My First Paragraph&lt;/p&gt;<br>
-    <br>&lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;<br>
-<br>
-&lt;script&gt;<br>
- document.getElementById(&quot;demo&quot;).innerHTML = 5 + 6;<br>
-    &lt;/script&gt;<br>
-<br>
-&lt;/body&gt;<br>
-&lt;/html&gt;
-    </pre></code>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;h1&gt;My First Web Page&lt;/h1&gt;
+&lt;p&gt;My First Paragraph&lt;/p&gt;
+&lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;
+&lt;script&gt;
+document.getElementById(&quot;demo&quot;).innerHTML = 5 + 6;
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
     <br>
-    <h3>Using document.write()</h3><br>
+    <h3><strong>Using document.write()</strong></h3><br>
     <p>For testing purposes, it is convenient to use document.write():<br>
     </p>
-    <code><pre>
-        &lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>
-&lt;body&gt;<br><br>&lt;h1&gt;My First Web Page&lt;/h1&gt;<br>
- &lt;p&gt;My first paragraph.&lt;/p&gt;<br>
- <br>&lt;script&gt;<br>document.write(5 + 6);<br>&lt;/script&gt;<br>
-<br>
-&lt;/body&gt;<br>
-&lt;/html&gt;
-    </pre></code>
-    <strong>Note:</strong>Using document.write() after an HTML document is loaded, will delete all existing HTML:<br>
-    The document.write() method should only be used for testing.<br>
-    <h3>Using window.alert()</h3><br>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;h1&gt;My First Web Page&lt;/h1&gt;
+&lt;p&gt;My first paragraph.&lt;/p&gt;
+&lt;script&gt;
+document.write(5 + 6);
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    <span class="note"><strong>Note:</strong>Using document.write() after an HTML document is loaded, will delete all existing HTML.<br>
+        The document.write() method should only be used for testing.<br></span>
+    <h3><strong>Using window.alert()</strong></h3><br>
     <p>You can use an alert box to display data:</p>
-    <code><pre>
-        &lt;!DOCTYPE html&gt;<br>
-&lt;html&gt;<br>
-&lt;body&gt;<br><br>
-&lt;h1&gt;My First Web Page&lt;/h1&gt;<br>&lt;p&gt;My first paragraph.&lt;/p&gt;<br>
- <br>
-&lt;script&gt;<br>window.alert(5 + 6);<br>
-&lt;/script&gt;<br>
-<br>
-&lt;/body&gt;<br>
-&lt;/html&gt;
-    </pre></code>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;h1&gt;My First Web Page&lt;/h1&gt;
+&lt;p&gt;My first paragraph.&lt;/p&gt;
+&lt;script&gt;window.alert(5 + 6);
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
     <br>
     <p>You can skip the window keyword.<br>
 In JavaScript, the window object is the global scope object, that means that variables, properties, and methods by default belong to the window object. This also means that specifying the window keyword is optional:<br>
     </p>
-    <code><pre>
-        &lt;!DOCTYPE html&gt;<br>
-&lt;html&gt;<br>
-&lt;body&gt;<br><br>
-&lt;h1&gt;My First Web Page&lt;/h1&gt;<br>&lt;p&gt;My first paragraph.&lt;/p&gt;<br>
- <br>
-&lt;script&gt;<br>alert(5 + 6);<br>
-&lt;/script&gt;<br>
-<br>
-&lt;/body&gt;<br>
-&lt;/html&gt;
-    </pre></code><br>
-    <h3>Using console.log()</h3><br>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;h1&gt;My First Web Page&lt;/h1&gt;
+&lt;p&gt;My first paragraph.&lt;/p&gt;
+&lt;script&gt;
+alert(5 + 6);
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre><br>
+    <h3><strong>Using console.log()</strong></h3><br>
     <p>For debugging purposes, you can call the console.log() method in the browser to display data.</p>
-    <code><pre>
-        &lt;!DOCTYPE html&gt;<br>
-&lt;html&gt;<br>
-&lt;body&gt;<br>
- <br>
-&lt;script&gt;<br>
-console.log(5 + 6);<br>
-&lt;/script&gt;<br>
-<br>
-&lt;/body&gt;<br>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;script&gt;
+console.log(5 + 6);
+&lt;/script&gt;
+&lt;/body&gt;
 &lt;/html&gt;
-    </pre></code>
+</code></pre>
     <br>
-    <h3>JavaScript Print</h3><br>
+    <h3><strong>JavaScript Print</strong></h3><br>
     <p>JavaScript does not have any print object or print methods.<br>
 You cannot access output devices from JavaScript.<br>
         The only exception is that you can call the window.print() method in the browser to print the content of the current window.<br>
     </p>
-    <code><pre>
-        &lt;!DOCTYPE html&gt;<br>
-&lt;html&gt;<br>&lt;body&gt;<br><br>
-&lt;button onclick=&quot;window.print()&quot;&gt;Print this page&lt;/button&gt;<br><br>
-&lt;/body&gt;<br>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;button onclick=&quot;window.print()&quot;&gt;Print this page&lt;/button&gt;
+&lt;/body&gt;
 &lt;/html&gt;
-    </pre></code>
+</code></pre>
 </div>
+<br><br>
 {% endblock %}

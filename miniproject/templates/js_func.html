@@ -11,26 +11,23 @@
     <a href="{% url 'jstutorials-functions' %}">JS Functions</a>
     <a href="{% url 'jstutorials-arrays' %}">JS Arrays</a>
 </div>
-<div class="main">
-    <h3>JavaScript Functions</h3><br>
+<div class="main" style="font-size:17px">
+    <h3><strong>JavaScript Functions</strong></h3>
     <p>A JavaScript function is a block of code designed to perform a particular task.<br>
     A JavaScript function is executed when "something" invokes it (calls it).
     </p>
-    <pre><code>
-function myFunction(p1, p2) {
+    <pre><code>function myFunction(p1, p2) {
   return p1 * p2;   // The function returns the product of p1 and p2
 }
-    </code></pre>
-    <br>
-    <h3>JavaScript Function Syntax</h3><br>
+    </code></pre><br>
+    <h3><strong>JavaScript Function Syntax</strong></h3>
     <p>A JavaScript function is defined with the function keyword, followed by a name, followed by parentheses ().<br>
     Function names can contain letters, digits, underscores, and dollar signs (same rules as variables).<br>
      The parentheses may include parameter names separated by commas:
 (parameter1, parameter2, ...)<br>
      The code to be executed, by the function, is placed inside curly brackets: {}<br>
     </p>
-    <pre><code>
-function name(parameter1, parameter2, parameter3) {
+    <pre><code>function name(parameter1, parameter2, parameter3) {
   // code to be executed
 }
     </code></pre>
@@ -38,9 +35,9 @@ function name(parameter1, parameter2, parameter3) {
     <p>Function parameters are listed inside the parentheses () in the function definition.<br>
     Function arguments are the values received by the function when it is invoked.<br>
      Inside the function, the arguments (the parameters) behave as local variables.<br>
-    </p>
-    <p class="note">A Function is much the same as a Procedure or a Subroutine, in other programming languages.</p>
-    <h3>Function Invocation</h3><br>
+    </p><br>
+    <p class="note">A Function is much the same as a Procedure or a Subroutine, in other programming languages.</p><br>
+    <h3><strong>Function Invocation</strong></h3>
     <p>The code inside the function will execute when "something" invokes (calls) the function:<br>
     <ul>
     <li>When an event occurs (when a user clicks a button)</li>
@@ -48,17 +45,16 @@ function name(parameter1, parameter2, parameter3) {
     <li>Automatically (self invoked)</li>
 </ul>
     </p>
-    <h3>Function Return</h3><br>
+    <h3><strong>Function Return</strong></h3>
     <p>When JavaScript reaches a return statement, the function will stop executing.<br>
     If the function was invoked from a statement, JavaScript will "return" to execute the code after the invoking statement.<br>
     Functions often compute a return value. The return value is "returned" back to the "caller":<br>
     </p>
-    <pre><code>
-var x = myFunction(4, 3);   // Function is called, return value will end up in x
-
+    <pre><code>var x = myFunction(4, 3);   // Function is called, return value will end up in x
 function myFunction(a, b) {
   return a * b;             // Function returns the product of a and b
 }
     </code></pre>
+    <br><br>
 </div>
 {% endblock %}

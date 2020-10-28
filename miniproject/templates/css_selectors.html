@@ -8,11 +8,13 @@
   <a href="{%url 'csstutorials-comments' %}">CSS Comments</a>
   <a href="{%url 'csstutorials-borders' %}">CSS Borders</a>
   <a href="{% url 'csstutorials-margins' %}">CSS Margins</a>
-    <a href="{% url 'csstutorials-boxmodel' %}">CSS Box Model</a>
-    <a href="{% url 'csstutorials-position' %}">CSS Position</a>
+  <a href="{% url 'csstutorials-boxmodel' %}">CSS Box Model</a>
+  <a href="{% url 'csstutorials-position' %}">CSS Position</a>
     <a href="{% url 'csstutorials-pseudoelements' %}">CSS Pseudo Elements</a>
+    <a href="{% url 'csstutorials-transitions' %}">CSS Transitions</a>
+    <a href="{% url 'csstutorials-animations' %}">CSS Animations</a>
 </div>
-<div class="main">
+<div class="main" style="font-size:17px">
     <h3><strong>CSS Selectors</strong></h3>
 <p>CSS selectors are used to "find" (or select) the HTML elements you want to style.</p>
 <p>We can divide CSS selectors into five categories:</p>
@@ -44,9 +46,9 @@ the id of the element.</p>
     <h3><strong>Example</strong></h3>
 <p>The CSS rule below will be applied to the HTML element with id="para1"</p>
 <pre><code>#para1
-{<br>
-&nbsp;&nbsp;text-align: center;<br>
-&nbsp;&nbsp;color: red;<br>
+{
+&nbsp;&nbsp;text-align: center;
+&nbsp;&nbsp;color: red;
 }
 </code></pre>
     <p class="note"><strong>Note:</strong> An id name cannot start with a number!</p><br>

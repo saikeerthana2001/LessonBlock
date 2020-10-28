@@ -2,7 +2,7 @@
 {% block body %}
 {% include 'navbar.html' %}
 {% include 'htmlsidebar.html' %}
-<div class="main">
+<div class="main" style="font-size:17px">
     <h3><strong>Citation Tags and Elements</strong></h3>
     <p>Citation elements include:</p>
     <ul>
@@ -14,30 +14,19 @@
         <li>&lt;q&gt; - Defines a short inline quotation</li>
     </ul>
     <br>
-    <p><pre>
-        <code>
-            &lt;blockquote&gt;
-            &lt;p&gt;It was a bright cold day in April, and the clocks were striking thirteen.&lt;/p&gt;
-            &lt;footer&gt;
-                First sentence in &lt;cite&gt;&lt;a href="http://www.george-orwell.org/1984/0.html"&gt;Nineteen Eighty-Four&lt;/a&gt;&lt;/cite&gt; by George Orwell (Part 1, Chapter 1).
-            &lt;/footer&gt;
-            &lt;/blockquote&gt;
-        </code>
-        </pre>
+<p><pre><code>&lt;blockquote&gt;
+&lt;p&gt;It was a bright cold day in April, and the clocks were striking thirteen.&lt;/p&gt;
+&lt;footer&gt;First sentence in &lt;cite&gt;&lt;a href="http://www.george-orwell.org/1984/0.html"&gt;Nineteen Eighty-Four&lt;/a&gt;&lt;/cite&gt; by George Orwell (Part 1, Chapter 1).&lt;/footer&gt;
+&lt;/blockquote&gt;
+</code></pre>
     </p>
     <br>
     <p>The output of above code looks like:</p>
-    <p><pre>
-        <code>
-            <blockquote>
-            <p>It was a bright cold day in April, and the clocks were striking thirteen.</p>
-            <footer>
-            First sentence in <cite><a href="http://www.george-orwell.org/1984/0.html">Nineteen Eighty-Four</a></cite> by George Orwell (Part 1, Chapter 1).
-            </footer>
-            </blockquote>
-        </code>
-        </pre>
-    </p>
+<p><pre><code><blockquote>
+<p>It was a bright cold day in April, and the clocks were striking thirteen.</p>
+<footer>First sentence in <cite><a href="http://www.george-orwell.org/1984/0.html">Nineteen Eighty-Four</a></cite> by George Orwell (Part 1, Chapter 1).</footer>
+</blockquote>
+</code></pre></p>
 
     <br>
     <br>
