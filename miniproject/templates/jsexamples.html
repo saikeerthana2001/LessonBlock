@@ -1,0 +1,433 @@
+{% extends 'base.html' %}
+{% block body %}
+{% include 'navbar.html' %}
+<style>
+.collapsible {
+  margin-left:15%;
+  margin-right:15%;
+  background-color: #D3D3D3;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 70%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #A9A9A9;
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+  width:70%;
+  margin-left:15%;
+  margin-right:15%;
+}
+</style>
+
+<h3 style="margin-left:15%;">What can JavaScript do?</h3><br>
+<button class="collapsible">Javascript can change HTML content</button>
+<div class="content">
+<pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;body&gt;
+        &lt;p id="demo">JavaScript can change HTML content.&lt;/p>
+        &lt;button type="button" onclick='document.getElementById("demo").innerHTML ="Hello JavaScript!"'>Click Me!&lt;/button>
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</div>
+<button class="collapsible">Javascript can change HTML attributes</button>
+<div class="content">
+<pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;body&gt;
+        &lt;h2>What Can JavaScript Do?&lt;/h2>
+        &lt;p>JavaScript can change HTML attribute values.&lt;/p>
+        &lt;p>In this case JavaScript changes the value of the src (source) attribute of an image.&lt;/p>
+        &lt;button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light&lt;/button>
+        &lt;img id="myImage" src="pic_bulboff.gif" style="width:100px">
+        &lt;button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light&lt;/button>
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</div>
+<button class="collapsible">Javascript can change CSS style</button>
+<div class="content">
+<pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;body&gt;
+        &lt;h2>What Can JavaScript Do?&lt;/h2>
+        &lt;p id="demo">JavaScript can change the style of an HTML element.&lt;/p>
+        &lt;button type="button" onclick="document.getElementById('demo').style.fontSize='35px'">Click Me!&lt;/button>
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</div>
+<button class="collapsible">Javascript can hide HTML elements</button>
+<div class="content">
+<pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;body&gt;
+        &lt;h2>What Can JavaScript Do?&lt;/h2>
+        &lt;p id="demo">JavaScript can hide HTML elements.&lt;/p>
+        &lt;button type="button" onclick="document.getElementById('demo').style.display='none'">Click Me!&lt;/button>
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</div>
+<button class="collapsible">Javascript can show hidden HTML elements</button>
+<div class="content">
+<pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;body&gt;
+        &lt;h2>What Can JavaScript Do?&lt;/h2>
+        &lt;p>JavaScript can show hidden HTML elements.&lt;/p>
+        &lt;p id="demo" style="display:none">Hello JavaScript!&lt;/p>
+        &lt;button type="button" onclick="document.getElementById('demo').style.display='block'">Click Me!&lt;/button>
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</div>
+<br>
+<h3 style="margin-left:15%;">JavaScript Syntax</h3><br>
+<button class="collapsible">Javascript statements</button>
+<div class="content">
+<pre><code>
+&lt;!DOCTYPE html>
+&lt;html>
+&lt;body>
+&lt;h2>JavaScript Statements&lt;/h2>
+&lt;p>A &lt;b>JavaScript program&lt;/b> is a list of &lt;b>statements&lt;/b> to be executed by a computer.&lt;/p>
+&lt;p id="demo">&lt;/p>
+&lt;script>
+var x, y, z;  // Declare 3 variables
+x = 5;    // Assign the value 5 to x
+y = 6;    // Assign the value 6 to y
+z = x + y;  // Assign the sum of x and y to z
+document.getElementById("demo").innerHTML =
+"The value of z is " + z + ".";
+&lt;/script>
+&lt;/body>
+&lt;/html>
+</code></pre>
+</div>
+<button class="collapsible">Javascript Numbers</button>
+<div class="content">
+<pre><code>
+&lt;!DOCTYPE html>
+&lt;html>
+&lt;body>
+&lt;h2>JavaScript Numbers&lt;/h2>
+&lt;p>Number can be written with or without decimals.&lt;/p>
+&lt;p id="demo">&lt;/p>
+&lt;script>
+document.getElementById("demo").innerHTML = 10.50;
+&lt;/script>
+&lt;/body>
+&lt;/html>
+</code></pre>
+</div>
+<button class="collapsible">Javascript Strings</button>
+<div class="content">
+<pre><code>
+&lt;!DOCTYPE html>
+&lt;html>
+&lt;body>
+    &lt;h2>JavaScript Strings&lt;/h2>
+    &lt;p>Strings can be written with double or single quotes.&lt;/p>
+    &lt;p id="demo">&lt;/p>
+    &lt;script>
+    document.getElementById("demo").innerHTML = 'John Doe';
+    &lt;/script>
+&lt;/body>
+&lt;/html>
+</code></pre>
+</div>
+<button class="collapsible">Javascript variables</button>
+<div class="content">
+<pre><code>
+&lt;!DOCTYPE html>
+&lt;html>
+&lt;body>
+    &lt;h2>JavaScript Variables&lt;/h2>
+    &lt;p>In this example, x is defined as a variable.
+    Then, x is assigned the value of 6:&lt;/p>
+    &lt;p id="demo">&lt;/p>
+    &lt;script>
+    var x;
+    x = 6;
+    document.getElementById("demo").innerHTML = x;
+    &lt;/script>
+&lt;/body>
+&lt;/html>
+</code></pre>
+</div>
+<button class="collapsible">Javascript Operators</button>
+<div class="content">
+<pre><code>
+&lt;!DOCTYPE html>
+&lt;html>
+&lt;body>
+    &lt;h2>JavaScript Operators&lt;/h2>
+    &lt;p>JavaScript uses arithmetic operators to compute values (just like algebra).&lt;/p>
+    &lt;p id="demo">&lt;/p>
+    &lt;script>
+    document.getElementById("demo").innerHTML = (5 + 6) * 10;
+    &lt;/script>
+&lt;/body>
+&lt;/html>
+</code></pre>
+</div>
+<button class="collapsible">JavaScript Assignment</button>
+<div class="content">
+<pre><code>
+&lt;!DOCTYPE html>
+&lt;html>
+&lt;body>
+    &lt;h2>Assigning JavaScript Values&lt;/h2>
+    &lt;p>In JavaScript the = operator is used to assign values to variables.&lt;/p>
+    &lt;p id="demo">&lt;/p>
+    &lt;script>
+    var x, y;
+    x = 5;
+    y = 6;
+    document.getElementById("demo").innerHTML = x + y;
+    &lt;/script>
+&lt;/body>
+&lt;/html>
+</code></pre>
+</div>
+<button class="collapsible">JavaScript Comments</button>
+<div class="content">
+<pre><code>
+&lt;!DOCTYPE html>
+&lt;html>
+&lt;body>
+    &lt;h2>JavaScript Comments are NOT Executed&lt;/h2>
+    &lt;p id="demo">&lt;/p>
+    &lt;script>
+    var x;
+    x = 5;
+    // x = 6; I will not be executed
+    document.getElementById("demo").innerHTML = x;
+    &lt;/script>
+&lt;/body>
+&lt;/html>
+</code></pre>
+</div>
+<br>
+<h3 style="margin-left:15%;">JavaScript Output</h3><br>
+<button class="collapsible">Writing into the HTML output</button>
+<div class="content">
+<pre><code>
+&lt;!DOCTYPE html>
+&lt;html>
+&lt;body>
+    &lt;h2>My First Web Page&lt;/h2>
+    &lt;p>My first paragraph.&lt;/p>
+    &lt;p>Never call document.write after the document has finished loading.
+    It will overwrite the whole document.&lt;/p>
+    &lt;script>
+    document.write(5 + 6);
+    &lt;/script>
+&lt;/body>
+&lt;/html>
+</code></pre>
+</div>
+<button class="collapsible">Writing into the HTML element</button>
+<div class="content">
+<pre><code>
+&lt;!DOCTYPE html>
+&lt;html>
+&lt;body>
+    &lt;h2>My First Web Page&lt;/h2>
+    &lt;p>My First Paragraph.&lt;/p>
+    &lt;p id="demo">&lt;/p>
+    &lt;script>
+    document.getElementById("demo").innerHTML = 5 + 6;
+    &lt;/script>
+&lt;/body>
+&lt;/html>
+</code></pre>
+</div>
+<button class="collapsible">Writing into an window alert box</button>
+<div class="content">
+<pre><code>
+&lt;!DOCTYPE html>
+&lt;html>
+&lt;body>
+    &lt;h2>My First Web Page&lt;/h2>
+    &lt;p>My first paragraph.&lt;/p>
+    &lt;script>
+    window.alert(5 + 6);
+    &lt;/script>
+&lt;/body>
+&lt;/html>
+</code></pre>
+</div>
+<button class="collapsible">Writing into the browser console</button>
+<div class="content">
+<pre><code>
+&lt;!DOCTYPE html>
+&lt;html>
+&lt;body>
+    &lt;h2>Activate Debugging&lt;/h2>
+    &lt;p>F12 on your keybord will activate debugging.&lt;/p>
+    &lt;p>Then select "Console" in the debugger menu.&lt;/p>
+    &lt;p>Then click Run again.&lt;/p>
+    &lt;script>
+    console.log(5 + 6);
+    &lt;/script>
+&lt;/body>
+&lt;/html>
+</code></pre>
+</div>
+<h3 style="margin-left:15%;">JavaScript Functions</h3><br>
+<button class="collapsible">A simple function</button>
+<div class="content">
+<pre><code>
+&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+&lt;script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Hello World!";
+}
+&lt;/script>
+&lt;/head>
+&lt;body>
+&lt;p>When you click "Try it", a function will be called.&lt;/p>
+&lt;p>The function will display a message.&lt;/p>
+&lt;button onclick="myFunction()">Try it&lt;/button>
+&lt;p id="demo">&lt;/p>
+&lt;/body>
+&lt;/html>
+</code></pre>
+</div>
+<button class="collapsible">A function with an argument</button>
+<div class="content">
+<pre><code>
+&lt;!DOCTYPE html>
+&lt;html>
+&lt;body>
+&lt;p>Click "Try it" to call a function with arguments&lt;/p>
+&lt;button onclick="myFunction('Harry Potter','Wizard')">Try it&lt;/button>
+&lt;p id="demo">&lt;/p>
+&lt;script>
+function myFunction(name,job) {
+  document.getElementById("demo").innerHTML = "Welcome " + name + ", the " + job + ".";
+}
+&lt;/script>
+&lt;/body>
+&lt;/html>
+</code></pre>
+</div>
+<button class="collapsible">A function with return value</button>
+<div class="content">
+<pre><code>
+    &lt;!DOCTYPE html>
+    &lt;html>
+    &lt;body>
+    &lt;h2>JavaScript Functions&lt;/h2>
+    &lt;p>This example calls a function which performs a calculation and returns the result:&lt;/p>
+    &lt;p id="demo">&lt;/p>
+    &lt;script>
+    var x = myFunction(4, 3);
+    document.getElementById("demo").innerHTML = x;
+    function myFunction(a, b) {
+    return a * b;
+    }
+    &lt;/script>
+    &lt;/body>
+    &lt;/html>
+</code></pre>
+</div>
+<br>
+<h3 style="margin-left:15%;">JavaScript Arrays</h3><br>
+<button class="collapsible">Create an array</button>
+<div class="content">
+<pre><code>
+&lt;!DOCTYPE html>
+&lt;html>
+&lt;body>
+&lt;h2>JavaScript Arrays&lt;/h2>
+&lt;p id="demo">&lt;/p>
+&lt;script>
+var cars = ["Saab", "Volvo", "BMW"];
+document.getElementById("demo").innerHTML = cars;
+&lt;/script>
+&lt;/body>
+&lt;/html>
+</code></pre>
+</div>
+<button class="collapsible">Access an array element</button>
+<div class="content">
+<pre><code>
+&lt;!DOCTYPE html>
+&lt;html>
+&lt;body>
+&lt;h2>JavaScript Arrays&lt;/h2>
+&lt;p>JavaScript array elements are accessed using numeric indexes (starting from 0).&lt;/p>
+&lt;p id="demo">&lt;/p>
+&lt;script>
+var cars = ["Saab", "Volvo", "BMW"];
+document.getElementById("demo").innerHTML = cars[0];
+&lt;/script>
+&lt;/body>
+&lt;/html>
+</code></pre>
+</div>
+<button class="collapsible">Change an array element</button>
+<div class="content">
+<pre><code>
+    &lt;!DOCTYPE html>
+    &lt;html>
+    &lt;body>
+    &lt;h2>JavaScript Array Methods&lt;/h2>
+    &lt;p>Array elements are accessed using their index number:&lt;/p>
+    &lt;p id="demo1">&lt;/p>
+    &lt;p id="demo2">&lt;/p>
+    &lt;script>
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo1").innerHTML = fruits;
+    fruits[0] = "Kiwi";
+    document.getElementById("demo2").innerHTML = fruits;
+    &lt;/script>
+    &lt;/body>
+    &lt;/html>
+</code></pre>
+</div>
+<br>
+<br>
+<br>
+<br>
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
+{% endblock %}

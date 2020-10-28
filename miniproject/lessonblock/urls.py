@@ -39,5 +39,5 @@ urlpatterns = [
     path('cssreferences/',cssreferences,name="cssreferences"),
     path('htmlexamples/',htmlexamples,name="htmlexamples"),
     path('htmlreferences/',htmlreferencesss,name="htmlreferences"),
-
+    path('jsexamples/',jsexamples,name="jsexamples"),
 ]

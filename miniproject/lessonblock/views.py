@@ -77,6 +77,8 @@ def htmlexamples(request):
     return render(request,"htmlexamples.html")
 def htmlreferencesss(request):
     return render(request,"htmlreferences.html")
+def jsexamples(request):
+    return render(request,'jsexamples.html')
 
 
 
