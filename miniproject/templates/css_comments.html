@@ -14,45 +14,38 @@
     <a href="{% url 'csstutorials-transitions' %}">CSS Transitions</a>
 </div>
 <div class="main">
-    <h3>CSS Comments</h3>
+    <h3><strong>CSS Comments</strong></h3>
     <br>
     <p>Comments are the statements in your code that are ignored by the compiler and are not executed. Comments are used to explain the code. They make the program more readable and understandable.
     </p><br>
     <strong>Syntax</strong>
-    <code><pre>
-        /* content */
-    </pre></code>
-    <p>Comment can be single line or multi-line.</p>
-    <br>
-    <p><strong>Note:</strong>The outputs are the same because comments are ignored by the browser and are not interpreted.
+    <pre><code>/* content */</code></pre>
+    <p style="color:red">Comment can be single line or multi-line.</p>
+    <p class="note"><strong>Note:</strong>The outputs are the same because comments are ignored by the browser and are not interpreted.
     </p><br>
     <p><strong>Example 1:</strong>This example describes the single line comment.
     </p>
-    <code><pre>
-        h1{<br>
-        &nbsp;&nbsp;color: green;<br>
-        &nbsp;&nbsp;/* Single line comment */<br>
-        }
-    </pre></code>
-    <br>
+<pre><code>h1{
+color: green;
+/* Single line comment */
+}</code></pre>
     <p><strong>Example 2:</strong>This example describes the multi-line comment.
     </p><br>
-    <code><pre>
-        h1{<br>
-        &nbsp;&nbsp;color: green;<br>
-        &nbsp;&nbsp;/* This is a<br>
-        &nbsp;&nbsp;multiline comment */
-        }
-    </pre></code>
+    <pre><code>h1{
+color: green;
+/* This is a
+multiline comment */
+}</code></pre>
     <br>
     <p><strong>Supported Browsers</strong>The browsers supported by CSS comments are listed below:
     </p>
-    <ul>
+    <ul style="color:red">
         <li>Google Chrome</li>
         <li>Internet Explorer</li>
         <li>Firefox</li>
         <li>Apple Safari</li>
         <li>Opera</li>
     </ul>
+    <br><br>
 </div>
 {% endblock %}

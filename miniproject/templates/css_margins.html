@@ -12,11 +12,11 @@
     <a href="{% url 'csstutorials-position' %}">CSS Position</a>
 </div>
 <div class="main">
-    <h3>CSS Margins</h3><br>
+    <h3><strong>CSS Margins</strong></h3><br>
     <p>The CSS margin properties are used to create space around elements, outside of any defined borders.<br>
     With CSS, you have full control over the margins. There are properties for setting the margin for each side of an element (top, right, bottom, and left).
     </p>
-    <h3>Margin - Individual Sides</h3>
+    <h3><strong>Margin - Individual Sides</strong></h3>
     <p>
        CSS has properties for specifying the margin for each side of an element:<br>
         <ul>
@@ -33,17 +33,15 @@
     <li>% - specifies a margin in % of the width of the containing element</li>
     <li>inherit - specifies that the margin should be inherited from the parent element</li>
 </ul><br>
-    <strong>Tip:</strong>Negative values are allowed.</p>
-    <code><pre>
-        p{<br>
-        &nbsp;&nbsp;margin-top: 100px;<br>
-        &nbsp;&nbsp;margin-bottom: 100px;<br>
-        &nbsp;&nbsp;margin-right: 150px;<br>
-        &nbsp;&nbsp;margin-left: 80px;<br>
-        }
-    </pre></code>
+    <span style="color:red"><strong>Tip:</strong>Negative values are allowed.</span></p>
+<pre><code>p{
+margin-top: 100px;
+margin-bottom: 100px;
+margin-right: 150px;
+margin-left: 80px;
+}</code></pre>
     <br>
-    <h3>Margin - Shorthand Property</h3>
+    <h3><strong>Margin - Shorthand Property</strong></h3>
     <p>To shorten the code, it is possible to specify all the margin properties in one property.<br>
     The margin property is a shorthand property for the following individual margin properties:<br>
     <ul>
@@ -62,11 +60,9 @@
         <li>left margin is 100px</li>
     </ul>
     </p>
-    <code><pre>
-        p{<br>
-        &nbsp;&nbsp;margin: 25px 50px 75px 100px;<br>
-        }<br>
-    </pre></code>
+<pre><code>p{
+margin: 25px 50px 75px 100px;
+}</code></pre>
     <p>
       If the margin property has three values:<br>
         margin: 25px 50px 75px;<br>
@@ -76,11 +72,9 @@
     <li>bottom margin is 75px</li>
 </ul>
     </p>
-    <code><pre>
-        p{<br>
-        &nbsp;&nbsp;margin: 25px 50px 75px;<br>
-        }<br>
-    </pre></code>
+<pre><code>p{
+margin: 25px 50px 75px;
+}</code></pre>
     <p>If the margin property has two values:<br>
     margin: 25px 50px;<br>
         <ul>
@@ -88,11 +82,9 @@
     <li>right and left margins are 50px</li>
 </ul>
     </p>
-    <code><pre>
-        p{<br>
-        &nbsp;&nbsp;margin: 25px 50px;<br>
-        }<br>
-    </pre></code>
+<pre><code>p{
+margin: 25px 50px;
+}</code></pre>
     <p>
        If the margin property has one value:<br>
         margin: 25px;<br>
@@ -100,40 +92,33 @@
     <li>all four margins are 25px</li>
 </ul>
     </p>
-    <code><pre>
-        p{><br>
-        &nbsp;&nbsp;margin: 25px;<br>
-        }<br>
-    </pre></code>
+<pre><code>p{
+margin: 25px;
+}</code></pre>
     <br>
-    <h3>The auto Value</h3><br>
+    <h3><strong>The auto Value</strong></h3><br>
     <p>
         You can set the margin property to auto to horizontally center the element within its container.<br>
         The element will then take up the specified width, and the remaining space will be split equally between the left and right margins.<br>
     </p>
-    <code><pre>
-        div{<br>
-        &nbsp;&nbsp;width: 300px;<br>
-        &nbsp;&nbsp;margin: auto;<br>
-        &nbsp;&nbsp;border: 1px solid red;<br>
-        }<br>
-    </pre>
-    </code>
+<pre><code>div{
+width: 300px;
+margin: auto;
+border: 1px solid red;
+}</code></pre>
     <br>
-    <h3>The inherit Value</h3>
+    <h3><strong>The inherit Value</strong></h3>
     <br><p>
     This example lets the left margin of the &lt; class="ex1"&gt; element be inherited from the parent element (&lt;div&gt;):
 </p>
-    <code><pre>
-        div{<br>
-        &nbsp;&nbsp;border: 1px solid red;<br>
-        &nbsp;&nbsp;margin-left: 100px;<br>
-        }<br>
-        <br>
-        p.ex1 {<br>
-        &nbsp;&nbsp;margin-left: inherit;<br>
-        }<br>
-    </pre></code>
-
+<pre><code>div{
+border: 1px solid red;
+margin-left: 100px;
+}
+p.ex1 {
+margin-left: inherit;
+}
+</code></pre>
+<br><br>
 </div>
 {% endblock %}
