@@ -93,6 +93,17 @@ def htmlex4(request):
     return render(request,"html_ex4.html")
 def htmlex5(request):
     return render(request,"html_ex5.html")
+def jsex1(request):
+    return render(request,"js_ex1.html")
+def jsex2(request):
+    return render(request,"js_ex2.html")
+def jsex3(request):
+    return render(request,"js_ex3.html")
+def jsex4(request):
+    return render(request,"js_ex4.html")
+def jsex5(request):
+    return render(request,"js_ex5.html")
+
 
 
 

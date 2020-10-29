@@ -47,4 +47,9 @@ urlpatterns = [
     path('htmlexercises3/',htmlex3,name="htmlex3"),
     path('htmlexercises4/',htmlex4,name="htmlex4"),
     path('htmlexercises5/',htmlex5,name="htmlex5"),
+    path('jsexercises/',jsex1,name="jsex1"),
+    path('jsexercises2/',jsex2,name="jsex2"),
+    path('jsexercises3/',jsex3,name="jsex3"),
+    path('jsexercises4/',jsex4,name="jsex4"),
+    path('jsexercises5/',jsex5,name="jsex5"),
 ]
