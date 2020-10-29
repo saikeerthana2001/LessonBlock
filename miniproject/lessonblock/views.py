@@ -81,7 +81,8 @@ def jsexamples(request):
     return render(request,'jsexamples.html')
 def jsreferences(request):
     return render(request,'jsreferences.html')
-
+def cssex1(request):
+    return render(request,'css_ex1.html')
 
 
 

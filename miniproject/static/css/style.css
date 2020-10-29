@@ -8,7 +8,7 @@
 }
 
 body{
-    background: #007bff;
+    background: #ffffff;
 }
 
 ::selection{
@@ -45,7 +45,9 @@ body{
     outline: none;
     border: none;
     border-radius: 5px;
-    background: #fff;
+    color: #fff ;
+    background:#325C74;
+    border:none;
     cursor: pointer;
 }
 
@@ -82,7 +84,7 @@ body{
 
 .info_box .info-list .info span{
     font-weight: 600;
-    color: #007bff;
+    color: #325C74;
 }
 .info_box .buttons{
     height: 60px;
@@ -115,6 +117,8 @@ body{
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s ease;
+    margin-top: 5%;
+    background-color:#325C74;
 }
 
 .quiz_box header{
@@ -122,7 +126,8 @@ body{
     z-index: 2;
     height: 70px;
     padding: 0 30px;
-    background: #fff;
+    background: #325C74;
+    color: #fff;
     border-radius: 5px 5px 0 0;
     display: flex;
     align-items: center;
@@ -184,11 +189,14 @@ section{
 section .que_text{
     font-size: 25px;
     font-weight: 600;
+    color: #325C74;
 }
 
 section .option_list{
     padding: 20px 0px;
-    display: block;   
+    display: block;
+    border-color: #325C74;
+    color: #325C74;
 }
 
 section .option_list .option{
@@ -261,6 +269,7 @@ footer{
     align-items: center;
     justify-content: space-between;
     border-top: 1px solid lightgrey;
+    color: #fff;
 }
 
 footer .total_que span{
@@ -307,7 +316,7 @@ footer button.show{
 }
 
 .result_box{
-    background: #fff;
+    background: #325C74;
     border-radius: 5px;
     display: flex;
     padding: 25px 30px;
@@ -337,11 +346,13 @@ footer button.show{
     margin: 10px 0;
     font-size: 18px;
     font-weight: 500;
+    color: #fff;
 }
 
 .result_box .score_text span p{
     padding: 0 4px;
     font-weight: 600;
+    color: #fff;
 }
 
 .result_box .buttons{
@@ -364,20 +375,49 @@ footer button.show{
 }
 
 .buttons button.restart{
-    color: #fff;
-    background: #007bff;
+    color: #325C74;
+    background: #fff;
+    border:none
+
 }
 
 .buttons button.restart:hover{
-    background: #0263ca;
+    color: #fff ;
+    background:#325C74;
+    border:none
 }
 
 .buttons button.quit{
-    color: #007bff;
+    color: #325C74;
     background: #fff;
+    border:none;
 }
 
 .buttons button.quit:hover{
-    color: #fff;
-    background: #007bff;
+    color: #fff ;
+    background:#325C74;
+    border:none
 }
+
+.next_btn{
+    background-color: #fff;
+    color: #325C74;
+    border:none;
+}
+.next_btn:hover{
+    background-color:#325C74;
+    color: #fff;
+    border: none;
+}
+.info_box{
+background-color: #fff;
+color: #325C74;
+}
+buttons{
+background-color: #325C74;
+}
+.info_title{
+background-color:#325C74;
+color: #fff;
+}
+
