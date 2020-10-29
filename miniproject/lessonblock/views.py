@@ -85,6 +85,14 @@ def cssex1(request):
     return render(request,'css_ex1.html')
 def htmlex1(request):
     return render(request,"html_ex1.html")
+def htmlex2(request):
+    return render(request,"html_ex2.html")
+def htmlex3(request):
+    return render(request,"html_ex3.html")
+def htmlex4(request):
+    return render(request,"html_ex4.html")
+def htmlex5(request):
+    return render(request,"html_ex5.html")
 
 
 

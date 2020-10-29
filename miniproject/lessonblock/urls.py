@@ -43,4 +43,8 @@ urlpatterns = [
     path('jsreferences/',jsreferences,name="jsreferences"),
     path('cssexercises/',cssex1,name="cssex1"),
     path('htmlexercises/',htmlex1,name="htmlex1"),
+    path('htmlexercises2/',htmlex2,name="htmlex2"),
+    path('htmlexercises3/',htmlex3,name="htmlex3"),
+    path('htmlexercises4/',htmlex4,name="htmlex4"),
+    path('htmlexercises5/',htmlex5,name="htmlex5"),
 ]

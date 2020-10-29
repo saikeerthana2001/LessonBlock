@@ -2,112 +2,57 @@
 let questions = [
     {
     numb: 1,
-    question: "What is html?",
-    answer: "Cascading Style Sheets",
+    question: "HTML stands for -",
+    answer: "HyperText Markup Language",
     options: [
-      "Creative Style Sheets",
-      "Cascading Style Sheets",
-      "Colorful Style Sheets",
-      "Computer Style Sheets"
+      "HighText Machine Language",
+      "HyperText and links Markup Language",
+      "HyperText Markup Language",
+      "None of these"
     ]
   },
     {
     numb: 2,
-    question: "Which of the following property is used to set the background color of an element?",
-    answer: "background-color",
+    question: "The correct sequence of HTML tags for starting a webpage is -",
+    answer: "HTML, Head, Title, Body",
     options: [
-      "background-color",
-      "background-image",
-      "background-repeat",
-      "background-position"
+      "Head, Title, HTML, body",
+      "HTML, Body, Title, Head",
+      "HTML, Head, Title, Body",
+      "HTML, Title, Head, Body"
     ]
   },
     {
     numb: 3,
-    question: "Which of the following property is used to set the color of a text",
-    answer: "color",
+    question: "Which character is used to represent the closing of a tag in HTML?",
+    answer: "/",
     options: [
-      "direction",
-      "color",
-      "letter-spacing",
-      "word-spacing"
+      "\\",
+      "!",
+      "/",
+      "."
     ]
   },
     {
     numb: 4,
-    question: " Which of the following property is used to control the flow and formatting of text?",
-    answer: "white-space",
+    question: "HTML is what type of language ? ",
+    answer: "Markup Language",
     options: [
-      "white-space",
-      "text-shadow",
-      "text-decoration",
-      "text-transform"
+      "Scripting Language",
+      "Markup Language",
+      "Programming Language",
+      "Network Protocol"
     ]
   },
     {
     numb: 5,
-    question: "Which of the following property specifies the width of a border?",
-    answer: "border-width",
+    question: "HTML uses",
+    answer: "Fixed tags defined by the language",
     options: [
-      "border-color",
-      "border-style",
-      "border-width",
-      "border-bottom-color"
-    ]
-  },
-    {
-    numb: 6,
-    question: "Which of the following property specifies the left padding of an element?",
-    answer: "padding-left",
-    options: [
-      "padding-bottom",
-      "padding-top",
-      "padding-left",
-      "padding-right"
-    ]
-  },
-    {
-    numb: 7,
-    question: "Which of the following selector matches all elements of a type?",
-    answer: "Type selector",
-    options: [
-      "Type selector",
-      "Universal selector",
-      "Descendant selector",
-      "Class selector"
-    ]
-  },
-    {
-    numb: 8,
-    question: "Which of the following defines 1% of viewport width?",
-    answer: "vw",
-    options: [
-      "px",
-      "vh",
-      "vw",
-      "vmin"
-    ]
-  },
-    {
-    numb: 9,
-    question: "If we want define style for an unique element, then which css selector will we use ?",
-    answer: "id",
-    options: [
-      "class",
-      "text",
-      "id",
-      "name"
-    ]
-  },
-    {
-    numb: 10,
-    question: "If we want to wrap a block of text around an image, which css property will we use ?",
-    answer: "float",
-    options: [
-      "wrap",
-      "push",
-      "float",
-      "align"
+      "User defined tags",
+      "Pre-specified tags",
+      "Fixed tags defined by the language",
+      "Tags only for linking"
     ]
   },
 ];
