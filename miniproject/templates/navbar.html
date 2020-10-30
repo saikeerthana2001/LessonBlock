@@ -61,6 +61,9 @@
       <a href="{% url 'jsex1' %}">JS Exercises</a>
     </div>
   </div>
+  <ul class="navbar-nav navbar-right">
+    <li><a href="{% url 'onlinecompiler' %}" target="_blank"><span style="font-size:20px;margin-right:10px;">Compile your code here!</span></a></li>
+  </ul>
 </div>
 <style>
   /* Navbar container */
@@ -100,8 +103,8 @@
 
 /* Add a red background color to navbar links on hover */
 .classb a:hover, .dropdown:hover .dropbtn {
-  background-color: lightgray;
-  color:#000000;
+
+  color: lightgray;
 }
 
 /* Dropdown content (hidden by default) */

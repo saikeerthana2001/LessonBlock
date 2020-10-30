@@ -52,4 +52,5 @@ urlpatterns = [
     path('jsexercises3/',jsex3,name="jsex3"),
     path('jsexercises4/',jsex4,name="jsex4"),
     path('jsexercises5/',jsex5,name="jsex5"),
+    path('onlinecompiler/',onlinecompiler,name="onlinecompiler")
 ]

@@ -1,0 +1,79 @@
+<!-- JQuery -->
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<!-- CSS Style -->
+
+<style type="text/css">
+
+    textarea{
+        padding: 10px 10px;
+        display: block;
+        width:100%;
+        height:70%;
+        background-color: #ffffff;
+        border: 1px solid #333;}
+
+    iframe{
+        display: block;
+        width:100%;
+        height:70%;
+        resize:both;
+        overflow: auto;
+        background-color: #ffffff;
+        border: 1px solid #333;}
+    nav{
+        height: 100px;
+        width:100%;
+        background: #325C74;
+        color:white;
+        /* clip-path: polygon(50% 0px, 44.73% 15.00%, 0.51% 153.33%, 5px 1.67%); */
+        }
+    nav h1{
+        padding:30px;
+        font-size: 30px;
+        font-family: arial;
+        }
+    .button {
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 0px 0px;
+        margin-left: 40%;
+        cursor: pointer;
+    }
+    .button2 {background-color: #325C74;} /* Blue */
+</style>
+
+<!-- JavaScript -->
+<body style="background-color: #f2f2f2;">
+<script type="text/javascript">
+ function updateIframe(){
+ var myFrame = $("#myframe").contents().find('body');
+ var textareaValue = $("textarea").val();
+ myFrame.html(textareaValue);
+ }
+</script>
+
+<nav>
+    <h1>LessonBlock Editor</h1>
+</nav>
+
+<br>
+
+<button onclick="updateIframe()" class="button button2">Run Code</button>
+
+
+<div style="width: 100%">
+    <div style="float: left;width: 49%">
+        <textarea rows="30" cols="50" placeholder="Type HTML Code Here"></textarea>
+    </div>
+    <div style="float: right; width: 49%">
+        <iframe id="myframe"></iframe>
+    </div>
+</div>
+</body>

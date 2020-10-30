@@ -103,6 +103,8 @@ def jsex4(request):
     return render(request,"js_ex4.html")
 def jsex5(request):
     return render(request,"js_ex5.html")
+def onlinecompiler(request):
+    return render(request,"onlinecompiler.html")
 
 
 
