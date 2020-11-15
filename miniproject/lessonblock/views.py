@@ -83,6 +83,14 @@ def jsreferences(request):
     return render(request,'jsreferences.html')
 def cssex1(request):
     return render(request,'css_ex1.html')
+def cssex2(request):
+    return render(request,'css_ex2.html')
+def cssex3(request):
+    return render(request,'css_ex3.html')
+def cssex4(request):
+    return render(request,'css_ex4.html')
+def cssex5(request):
+    return render(request,'css_ex5.html')
 def htmlex1(request):
     return render(request,"html_ex1.html")
 def htmlex2(request):
