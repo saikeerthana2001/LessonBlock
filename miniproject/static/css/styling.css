@@ -10,8 +10,6 @@
   display:block;
   padding-top: 20px;
   z-index:1;
-
-
 }
 
 .sidenav a {
@@ -45,11 +43,22 @@
   margin: 20px;
   font-size:20px;
 }
+.certidiv {
+  background-color: #EDEBEA;
+  width: 100%;
+  border: 5px solid lightgrey;
+  padding: 20px;
+  margin: 10px;
+  font-size:20px;
+}
 
 td,th{
     padding:20px;
 }
 
+.table2{
+    padding:0px;
+}
 .note{
     background: #FFFFCC;
 }

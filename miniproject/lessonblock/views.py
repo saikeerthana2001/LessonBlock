@@ -1,5 +1,6 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.decorators import login_required
 
 def Homepage(request):
 	return render(request,"homepage.html")
@@ -113,6 +114,9 @@ def jsex5(request):
     return render(request,"js_ex5.html")
 def onlinecompiler(request):
     return render(request,"onlinecompiler.html")
+@login_required(login_url="/signup/")
+def certification(request):
+    return render(request,'certification.html')
 
 
 

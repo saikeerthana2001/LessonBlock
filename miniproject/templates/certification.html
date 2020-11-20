@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% block body %}
+{% include 'navbarlogout.html' %}
+
+<div class="sidenav">
+  <a><b>HTML</b></a>
+  <a href="{% url 'htmltutorials' %}">Tutorials</a>
+  <a href="{% url 'htmlreferences' %}">References</a>
+  <a href="{% url 'htmlexamples' %}">Examples</a>
+  <a href="{% url 'htmlex1' %}"> Exercises</a>
+  <br><br>
+  <a><b>CSS</b></a>
+  <a href="{%url 'csstutorials' %}">Tutorials</a>
+  <a href="{% url 'cssreferences' %}">References</a>
+  <a href="{%url 'cssexamples' %}">Examples</a>
+  <a href="{%url 'cssex1' %}"> Exercises</a>
+  <br><br>
+  <a><b>JAVASCRIPT</b></a>
+  <a href="{%url 'jstutorials' %}">Tutorials</a>
+  <a href="{%url 'jsreferences'%}">References</a>
+  <a href="{% url 'jsexamples' %}">Examples</a>
+  <a href="{% url 'jsex1' %}"> Exercises</a>
+  </div>
+<!-- Page content -->
+<div class="main"  style="font-size:20px;">
+  <h1><span style="color:#325C74;">Lesson</span><span style="color:#67C8FF;">Block</span>&nbsp;Certifications</h1>
+  <p><strong>The world is shifting at an incredible pace, are you ready to skill up?</strong></p>
+  <p>Enter the journey towards building your digital literacy skills. W3Schools'
+    prove fundamental knowledge of web development.
+    Start to build your profile by choosing a certification from our acknowledged selection.</p>
+  <table>
+    <tr>
+      <td style="padding-left:100px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8ZJgjWmRJQ9UHmDcF3T01UWK_NOHRZfNHGw&usqp=CAU" width="170" height="170"></td>
+      <td style="padding-left:130px;"><img src="https://i.pinimg.com/originals/33/2b/3f/332b3fe64e5d6d2d9812a09fc0267f2d.jpg" width="230" height="230"></td>
+      <td style="padding-left:160px;"><img src="https://atlas-content-cdn.pixelsquid.com/stock-images/black-and-white-globe-shape-PxlzYO7-600.jpg" width="230" height="230"></td>
+      
+    </tr>
+    <tr>
+      <td style="padding-bottom:0px;padding-left:130px;"><strong>Gain new Skills</strong></td>
+      <td style="padding-bottom:0px;padding-left:120px;"><strong>Study at your own pace</strong></td>
+      <td style="padding-bottom:0px;padding-left:210px;"><strong>Graduate online</strong></td>
+    </tr>
+    <tr>
+      <td style="padding-top:0px;padding:0px;padding-left:90px;"><p>Increase your employability</p></td>
+      <td style="padding-top:0px;padding:0px;padding-left:100px;"><p>Complete your exam from home</p></td>
+      <td style="padding-top:0px;padding:0px;padding-left:100px;"><p>Study for free and when it is convenient for you</p></td>
+    </tr>
+  </table>
+  <br><br>
+  <table style="margin-left:5%;">
+    <tr>
+      <td style="padding:0px;padding-right:70px;"><div class="certidiv">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png" width="250" height="250">
+        <center>
+        <a style="font-size:18px;margin-top:10px;" href="{% url 'htmltutorials' %}">READ MORE</a><br>
+        <a style="font-size:18px;">GET CERTIFICATION</a>
+        </center>
+      </div></td>
+      <td style="padding:0px;padding-right:70px;"><div class="certidiv">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png" width="230" height="250">
+        <center>
+        <a style="font-size:18px;margin-top:10px;" href="{% url 'csstutorials' %}">READ MORE</a><br>
+        <a style="font-size:18px;">GET CERTIFICATION</a>
+        </center>
+      </div></td>
+      <td style="padding:0px;"><div class="certidiv">
+        <img src="https://theicom.org/wp-content/uploads/2016/03/js-logo.png" width="250" height="250">
+        <center>
+        <a style="font-size:18px;margin-top:10px;" href="{% url 'jstutorials' %}">READ MORE</a><br>
+        <a style="font-size:18px;">GET CERTIFICATION</a>
+        </center>
+      </div></td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <div class="certidiv">
+          <h1 style="text-align:center;">FRONT END</h1><br>
+          <img style="margin-right:60px;margin-left:40px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png" width="250" height="250">
+          <span style="margin-right:60px;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png" width="230" height="250"></span>
+          <span><img src="https://theicom.org/wp-content/uploads/2016/03/js-logo.png" width="250" height="250"></span><br><br>
+          <center>
+          <a style="font-size:20px;margin-top:10px;" href="{% url 'htmltutorials' %}">READ MORE</a>&nbsp;&nbsp;&nbsp;
+          <a style="font-size:20px;">GET CERTIFICATION</a>
+          </center>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+</div>
+{% endblock %}

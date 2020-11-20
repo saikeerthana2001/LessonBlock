@@ -1,17 +1,11 @@
 <nav class="navbar navbar-default" style="margin-bottom:0px;" >
   <div class="container-fluid" style="margin-top:15px;">
     <div class="navbar-header">
-
       <a class="navbar-brand" href="{% url 'Homepage' %}"><span style="color:#325C74;font-size:30px;"><b>Lesson</b></span><span style="color:#67C8FF;font-size:30px;"><b>Block</b></span></a>
-
     </div>
     <ul class="nav navbar-nav navbar-right">
         <li><a style="font-size:18px;color:#325C74;margin-right:20px">A GREAT PLACE TO LEARN!</a></li>
-        {% if user.is_authenticated %}
-        <li><button style="background-color:#325C74;font-size: 14px;border-radius: 8px;padding: 8px 10px;margin-right:20px"><a style="color:#ffffff;" href="{% url 'signup' %}">SIGNUP</a></button></li>
-        {% else %}
-        <li><button style="background-color:#325C74;font-size: 14px;border-radius: 8px;padding: 8px 10px;margin-right:20px"><a style="color:#ffffff;" href="{% url 'signup' %}">SIGNUP</a></button></li>
-        {% endif %}
+      <li><button style="background-color:#325C74;font-size: 14px;border-radius: 8px;padding: 8px 10px;margin-right:20px"><a style="color:#ffffff;" href="{% url 'logout' %}">LOGOUT</a></button></li>
     </ul>
   </div>
 </nav>
@@ -67,7 +61,7 @@
       <a href="{% url 'jsex1' %}">JS Exercises</a>
     </div>
   </div>
-  <a href="{% url 'certification' %}">CERTIFICATION</a>
+  <a href="#home">CERTIFICATION</a>
   <ul class="navbar-nav navbar-right">
     <li><a href="{% url 'onlinecompiler' %}" target="_blank"><span style="font-size:20px;margin-right:10px;">Compile your code here!</span></a></li>
   </ul>
