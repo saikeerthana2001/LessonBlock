@@ -1,6 +1,11 @@
 {% extends 'base.html' %}
 {% block body %}
 {% include 'navbar.html' %}
+<style>
+.sidenav {
+    height:2800px;
+}
+</style>
 <div class="sidenav">
   <a href="{%url 'csstutorials' %}">CSS Introduction</a>
   <a href="{%url 'csstutorials-syntax' %}">CSS Syntax</a>
@@ -15,6 +20,14 @@
     <a href="{% url 'csstutorials-animations' %}">CSS Animations</a>
 </div>
 <div class="main" style="font-size:20px">
+    <br>
+    <button class="previous" style="height: 50px;
+    width:100px;
+    background: #325C74;border-radius: 8px;
+    color: #ffffff;"><a href="{%url 'csstutorials-borders' %}" style="color:#ffffff">Prev</a></button>
+    <button class="next" style="height: 50px;
+    width:100px;
+    background: #325C74;border-radius: 8px;;float:right"><a href="{% url 'csstutorials-boxmodel' %}" style="color:#ffffff">Next</a></button><br>
     <h3><strong>CSS Margins</strong></h3><br>
     <p>The CSS margin properties are used to create space around elements, outside of any defined borders.<br>
     With CSS, you have full control over the margins. There are properties for setting the margin for each side of an element (top, right, bottom, and left).

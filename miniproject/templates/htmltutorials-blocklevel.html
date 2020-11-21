@@ -3,6 +3,15 @@
 {% include 'navbar.html' %}
 {% include 'htmlsidebar.html' %}
 <div class="main" style="font-size:20px">
+        <br>
+        <button class="previous" style="height: 50px;
+    width:100px;
+    background: #325C74;border-radius: 8px;
+    color: #ffffff;"><a href="{% url 'htmltutorials-forms' %}" style="color:#ffffff">Prev</a></button>
+    <button class="next" style="height: 50px;
+    width:100px;
+    background: #325C74;border-radius: 8px;;float:right"><a href="{% url 'htmltutorials-inline' %}" style="color:#ffffff">Next</a></button><br>
+    <h3><strong>What is HTML?</strong></h3>
     <h3><strong>HTML Block-level Elements</strong></h3>
     <p>Every HTML element has a default display value, depending on what type of element it is.
     There are two display values: block and inline.</p>
