@@ -58,4 +58,13 @@ urlpatterns = [
     path('jsexercises5/',jsex5,name="jsex5"),
     path('onlinecompiler/',onlinecompiler,name="onlinecompiler"),
     path('certification/',certification,name="certification"),
+    path('htmlexam/',htmlexam,name="htmlexam"),
+    path('cssexam/',cssexam,name="cssexam"),
+    path('jsexam/',jsexam,name="jsexam"),
+    path('frontendexam/',frontendexam,name="frontendexam"),
+    path('pdf_view1/', ViewPDF1.as_view(), name="pdf_view1"),
+    path('pdf_view2/', ViewPDF2.as_view(), name="pdf_view2"),
+    path('pdf_view3/', ViewPDF3.as_view(), name="pdf_view3"),
+    path('pdf_view4/', ViewPDF4.as_view(), name="pdf_view4"),
+    #path('pdf_download/',DownloadPDF.as_view(), name="pdf_download"),
 ]

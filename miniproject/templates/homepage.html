@@ -1,7 +1,29 @@
 {% extends 'base.html' %}
 {% block body %}
 {% include 'navbar.html' %}
-<div class="sidenav">
+<script>
+  $(function() {
+
+    var $sidebar   = $("#sidebar"),
+        $window    = $(window),
+        offset     = $sidebar.offset(),
+        topPadding = 0;
+
+    $window.scroll(function() {
+        if ($window.scrollTop() > offset.top) {
+            $sidebar.stop().animate({
+                marginTop: $window.scrollTop() - offset.top + topPadding
+            });
+        } else {
+            $sidebar.stop().animate({
+                marginTop: 0
+            });
+        }
+    });
+
+});
+</script>
+<div class="sidenav" id="sidebar">
   <a><b>HTML</b></a>
   <a href="{% url 'htmltutorials' %}">Tutorials</a>
   <a href="{% url 'htmlreferences' %}">References</a>

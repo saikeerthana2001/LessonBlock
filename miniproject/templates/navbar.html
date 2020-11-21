@@ -8,9 +8,9 @@
     <ul class="nav navbar-nav navbar-right">
         <li><a style="font-size:18px;color:#325C74;margin-right:20px">A GREAT PLACE TO LEARN!</a></li>
         {% if user.is_authenticated %}
-        <li><button style="background-color:#325C74;font-size: 14px;border-radius: 8px;padding: 8px 10px;margin-right:20px"><a style="color:#ffffff;" href="{% url 'signup' %}">SIGNUP</a></button></li>
+        <li><button style="background-color:#325C74;font-size: 14px;border-radius: 8px;padding: 8px 10px;margin-right:20px"><a style="color:#ffffff;" href="{% url 'logout' %}">LOGOUT</a></button></li>
         {% else %}
-        <li><button style="background-color:#325C74;font-size: 14px;border-radius: 8px;padding: 8px 10px;margin-right:20px"><a style="color:#ffffff;" href="{% url 'signup' %}">SIGNUP</a></button></li>
+        <li><button style="background-color:#325C74;font-size: 14px;border-radius: 8px;padding: 8px 10px;margin-right:20px"><a style="color:#ffffff;" href="{% url 'signup' %}">LOGIN</a></button></li>
         {% endif %}
     </ul>
   </div>

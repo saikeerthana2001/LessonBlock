@@ -1,6 +1,12 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
+from io import BytesIO
+from django.http import HttpResponse
+from django.template.loader import get_template
+from django.views import View
+from xhtml2pdf import pisa
+from django.utils.timezone import datetime
 
 def Homepage(request):
 	return render(request,"homepage.html")
@@ -117,6 +123,79 @@ def onlinecompiler(request):
 @login_required(login_url="/signup/")
 def certification(request):
     return render(request,'certification.html')
+@login_required(login_url="/signup/")
+def htmlexam(request):
+    return render(request,'htmlexam.html')
+@login_required(login_url="/signup/")
+def cssexam(request):
+    return render(request,'cssexam.html')
+
+@login_required(login_url="/signup/")
+def jsexam(request):
+    return render(request,'jsexam.html')
+
+@login_required(login_url="/signup/")
+def frontendexam(request):
+    return render(request,'frontendexam.html')
+
+
+def render_to_pdf(template_src, context_dict={}):
+    template = get_template(template_src)
+    html = template.render(context_dict)
+    result = BytesIO()
+    pdf = pisa.pisaDocument(BytesIO(html.encode("ISO-8859-1")), result)
+    if not pdf.err:
+        return HttpResponse(result.getvalue(), content_type='application/pdf')
+    return None
+
+
+
+
+# Opens up page as PDF
+class ViewPDF1(View):
+    def get(self, request, *args, **kwargs):
+        data={
+            'today':datetime.today().strftime("%d/%m/%Y"),
+            'name':request.user.username,
+            'subject': 'HTML',
+        }
+        pdf = render_to_pdf('pdf_template.html', data)
+        return HttpResponse(pdf, content_type='application/pdf')
+# Opens up page as PDF
+class ViewPDF2(View):
+    def get(self, request, *args, **kwargs):
+        data={
+            'today':datetime.today().strftime("%d/%m/%Y"),
+            'name':request.user.username,
+            'subject': 'CSS',
+        }
+        pdf = render_to_pdf('pdf_template.html', data)
+        return HttpResponse(pdf, content_type='application/pdf')
+# Opens up page as PDF
+class ViewPDF3(View):
+    def get(self, request, *args, **kwargs):
+        data={
+            'today':datetime.today().strftime("%d/%m/%Y"),
+            'name':request.user.username,
+            'subject': 'Javascript',
+        }
+        pdf = render_to_pdf('pdf_template.html', data)
+        return HttpResponse(pdf, content_type='application/pdf')
+# Opens up page as PDF
+class ViewPDF4(View):
+    def get(self, request, *args, **kwargs):
+        data={
+            'today':datetime.today().strftime("%d/%m/%Y"),
+            'name':request.user.username,
+            'subject': 'Front-End',
+        }
+        pdf = render_to_pdf('pdf_template.html', data)
+        return HttpResponse(pdf, content_type='application/pdf')
+
+
+
+
+
 
 
 

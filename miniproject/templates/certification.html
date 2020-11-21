@@ -1,8 +1,7 @@
 {% extends 'base.html' %}
 {% block body %}
 {% include 'navbarlogout.html' %}
-
-<div class="sidenav">
+<div class="sidenav" id="sidebar">
   <a><b>HTML</b></a>
   <a href="{% url 'htmltutorials' %}">Tutorials</a>
   <a href="{% url 'htmlreferences' %}">References</a>
@@ -22,10 +21,32 @@
   <a href="{% url 'jsex1' %}"> Exercises</a>
   </div>
 <!-- Page content -->
+<script>
+  $(function() {
+
+    var $sidebar   = $("#sidebar"),
+        $window    = $(window),
+        offset     = $sidebar.offset(),
+        topPadding = 0;
+
+    $window.scroll(function() {
+        if ($window.scrollTop() > offset.top) {
+            $sidebar.stop().animate({
+                marginTop: $window.scrollTop() - offset.top + topPadding
+            });
+        } else {
+            $sidebar.stop().animate({
+                marginTop: 0
+            });
+        }
+    });
+
+});
+</script>
 <div class="main"  style="font-size:20px;">
   <h1><span style="color:#325C74;">Lesson</span><span style="color:#67C8FF;">Block</span>&nbsp;Certifications</h1>
   <p><strong>The world is shifting at an incredible pace, are you ready to skill up?</strong></p>
-  <p>Enter the journey towards building your digital literacy skills. W3Schools'
+  <p>Welcome <strong> {{user.username }} </strong>, Enter the journey towards building your digital literacy skills. W3Schools'
     prove fundamental knowledge of web development.
     Start to build your profile by choosing a certification from our acknowledged selection.</p>
   <table>
@@ -50,24 +71,24 @@
   <table style="margin-left:5%;">
     <tr>
       <td style="padding:0px;padding-right:70px;"><div class="certidiv">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png" width="250" height="250">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png" width="250" height="250" style="margin-bottom:15px;">
         <center>
         <a style="font-size:18px;margin-top:10px;" href="{% url 'htmltutorials' %}">READ MORE</a><br>
-        <a style="font-size:18px;">GET CERTIFICATION</a>
+        <a style="font-size:18px;" href="{% url 'htmlexam' %}" target="_blank">GET CERTIFICATION</a>
         </center>
       </div></td>
       <td style="padding:0px;padding-right:70px;"><div class="certidiv">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png" width="230" height="250">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png" width="230" height="250" style="margin-bottom:15px;">
         <center>
         <a style="font-size:18px;margin-top:10px;" href="{% url 'csstutorials' %}">READ MORE</a><br>
-        <a style="font-size:18px;">GET CERTIFICATION</a>
+        <a style="font-size:18px;" href="{% url 'cssexam' %}" target="_blank">GET CERTIFICATION</a>
         </center>
       </div></td>
       <td style="padding:0px;"><div class="certidiv">
-        <img src="https://theicom.org/wp-content/uploads/2016/03/js-logo.png" width="250" height="250">
+        <img src="https://theicom.org/wp-content/uploads/2016/03/js-logo.png" width="250" height="250" style="margin-bottom:15px;"><br>
         <center>
         <a style="font-size:18px;margin-top:10px;" href="{% url 'jstutorials' %}">READ MORE</a><br>
-        <a style="font-size:18px;">GET CERTIFICATION</a>
+        <a style="font-size:18px;" href="{% url 'jsexam' %}" target="_blank">GET CERTIFICATION</a>
         </center>
       </div></td>
     </tr>
@@ -80,7 +101,7 @@
           <span><img src="https://theicom.org/wp-content/uploads/2016/03/js-logo.png" width="250" height="250"></span><br><br>
           <center>
           <a style="font-size:20px;margin-top:10px;" href="{% url 'htmltutorials' %}">READ MORE</a>&nbsp;&nbsp;&nbsp;
-          <a style="font-size:20px;">GET CERTIFICATION</a>
+          <a style="font-size:20px;" href="{% url 'frontendexam' %}" target="_blank">GET CERTIFICATION</a>
           </center>
         </div>
       </td>

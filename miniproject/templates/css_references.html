@@ -1,7 +1,20 @@
 {% extends 'base.html' %}
 {% block body %}
 {% include 'navbar.html' %}
+<style>
+  tbody td{
+  padding: 20px;
+}
 
+tbody tr:nth-child(odd){
+  background-color: #dcdcdc;
+  color: #000;
+}
+tr:nth-child(even) {
+    background-color: #c0c0c0;
+    color:#000;
+}
+</style>
 <script>
 function myFunction() {
   var input, filter, table, tr, td, i,alltables;
@@ -41,7 +54,7 @@ function myFunction() {
 <center>
 <table width="70%" border="1" data-name="mytable" style="font-size:20px">
   <tr>
-    <td colspan="2"> <h2>A</h2></td>
+    <td colspan="2"><h4><b>A</b></h4></td>
   </tr>
   <tr>
     <td>align-content</td>

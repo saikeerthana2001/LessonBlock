@@ -1,4 +1,4 @@
-<div class="sidenav">
+<div class="sidenav" id="sidebar">
     <a href="{% url 'htmltutorials' %}">HTML Overview</a>
   <a href="{% url 'htmltutorials-basictags'%}">HTML Tags</a>
   <a href="{% url 'htmltutorials-textformatting'%}">HTML Text formatting tags</a>
@@ -9,3 +9,25 @@
   <a href="{% url 'htmltutorials-blocklevel' %}">HTML Block elements</a>
   <a href="{% url 'htmltutorials-inline' %}">HTML Inline elements</a>
 </div>
+<script>
+  $(function() {
+
+    var $sidebar   = $("#sidebar"),
+        $window    = $(window),
+        offset     = $sidebar.offset(),
+        topPadding = 0;
+
+    $window.scroll(function() {
+        if ($window.scrollTop() > offset.top) {
+            $sidebar.stop().animate({
+                marginTop: $window.scrollTop() - offset.top + topPadding
+            });
+        } else {
+            $sidebar.stop().animate({
+                marginTop: 0
+            });
+        }
+    });
+
+});
+</script>
