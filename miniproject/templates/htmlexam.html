@@ -92,6 +92,22 @@
 
     <!-- Inside this JavaScript file I've coded all Quiz Codes -->
     <script src="{% static 'js/examscript.js' %}"></script>
+    <script>
+        $(function(){
+
+        $('a').click(function(){
+            var clickCount = jQuery.data( this, 'clickCount');
+            if (!clickCount){
+                clickCount  = 0
+            }
+            clickCount++;
+            if(clickCount>1){
+                alert("You have already received your certificate");
+            }
+            jQuery.data( this, 'clickCount',clickCount);
+        });
+        });
+    </script>
 
 </body>
 </html>
